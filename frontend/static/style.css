@@ -1,0 +1,27 @@
+/* ============================================================
+   TeamX Digital Library — Stylesheet
+   Author: Cesar Arturo Balam Euan (2309017)
+   Role:   Frontend & Form Design
+   ============================================================ */
+
+/* TODO (Arturo): Define styles for:
+   - Header & navigation
+   - Book cards grid
+   - Search bar with filter toggle
+   - Subject tag badges
+   - Save button
+   - Responsive layout
+*/
+
+:root {
+    --primary: #2563eb;
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); }
+.container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
