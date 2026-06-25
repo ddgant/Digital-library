@@ -1,0 +1,201 @@
+student_id,control_num,full_name,email,career,semester
+1,2393810,Student 001,student001@uni.mx,Data Engineering,1
+2,2346048,Student 002,student002@uni.mx,Robotics,4
+3,2328289,Student 003,student003@uni.mx,Data Engineering,2
+4,2387397,Student 004,student004@uni.mx,Embedded Systems,1
+5,2313905,Student 005,student005@uni.mx,Data Engineering,4
+6,2340495,Student 006,student006@uni.mx,Data Engineering,4
+7,2395181,Student 007,student007@uni.mx,Embedded Systems,4
+8,2368878,Student 008,student008@uni.mx,Biotechnology,1
+9,2330926,Student 009,student009@uni.mx,Embedded Systems,6
+10,2346421,Student 010,student010@uni.mx,Robotics,4
+11,2354118,Student 011,student011@uni.mx,Data Engineering,2
+12,2359797,Student 012,student012@uni.mx,Data Engineering,6
+13,2355082,Student 013,student013@uni.mx,Biotechnology,1
+14,2370217,Student 014,student014@uni.mx,Data Engineering,7
+15,2320328,Student 015,student015@uni.mx,Biotechnology,6
+16,2385674,Student 016,student016@uni.mx,Robotics,2
+17,2316006,Student 017,student017@uni.mx,Robotics,5
+18,2320458,Student 018,student018@uni.mx,Robotics,2
+19,2359823,Student 019,student019@uni.mx,Biotechnology,8
+20,2393320,Student 020,student020@uni.mx,Biotechnology,3
+21,2358520,Student 021,student021@uni.mx,Biotechnology,4
+22,2397841,Student 022,student022@uni.mx,Biotechnology,2
+23,2389840,Student 023,student023@uni.mx,Robotics,4
+24,2331417,Student 024,student024@uni.mx,Embedded Systems,7
+25,2345382,Student 025,student025@uni.mx,Robotics,6
+26,2317331,Student 026,student026@uni.mx,Robotics,1
+27,2351347,Student 027,student027@uni.mx,Embedded Systems,5
+28,2318675,Student 028,student028@uni.mx,Robotics,6
+29,2337869,Student 029,student029@uni.mx,Embedded Systems,7
+30,2394259,Student 030,student030@uni.mx,Embedded Systems,3
+31,2344718,Student 031,student031@uni.mx,Robotics,4
+32,2383579,Student 032,student032@uni.mx,Biotechnology,7
+33,2386484,Student 033,student033@uni.mx,Embedded Systems,6
+34,2338746,Student 034,student034@uni.mx,Robotics,8
+35,2321915,Student 035,student035@uni.mx,Data Engineering,2
+36,2330033,Student 036,student036@uni.mx,Robotics,7
+37,2388172,Student 037,student037@uni.mx,Data Engineering,7
+38,2360019,Student 038,student038@uni.mx,Embedded Systems,5
+39,2382512,Student 039,student039@uni.mx,Data Engineering,2
+40,2399353,Student 040,student040@uni.mx,Biotechnology,6
+41,2324621,Student 041,student041@uni.mx,Biotechnology,7
+42,2330730,Student 042,student042@uni.mx,Embedded Systems,1
+43,2344522,Student 043,student043@uni.mx,Robotics,2
+44,2391959,Student 044,student044@uni.mx,Biotechnology,4
+45,2330032,Student 045,student045@uni.mx,Biotechnology,3
+46,2380697,Student 046,student046@uni.mx,Data Engineering,6
+47,2374042,Student 047,student047@uni.mx,Data Engineering,2
+48,2357576,Student 048,student048@uni.mx,Biotechnology,4
+49,2317592,Student 049,student049@uni.mx,Robotics,2
+50,2321226,Student 050,student050@uni.mx,Embedded Systems,2
+51,2379822,Student 051,student051@uni.mx,Robotics,3
+52,2396474,Student 052,student052@uni.mx,Embedded Systems,3
+53,2344741,Student 053,student053@uni.mx,Embedded Systems,4
+54,2380686,Student 054,student054@uni.mx,Robotics,5
+55,2362296,Student 055,student055@uni.mx,Biotechnology,8
+56,2377839,Student 056,student056@uni.mx,Embedded Systems,2
+57,2342493,Student 057,student057@uni.mx,Robotics,2
+58,2354313,Student 058,student058@uni.mx,Data Engineering,4
+59,2387128,Student 059,student059@uni.mx,Robotics,1
+60,2319305,Student 060,student060@uni.mx,Data Engineering,4
+61,2318834,Student 061,student061@uni.mx,Data Engineering,6
+62,2319287,Student 062,student062@uni.mx,Robotics,5
+63,2397684,Student 063,student063@uni.mx,Embedded Systems,4
+64,2380678,Student 064,student064@uni.mx,Robotics,8
+65,2341850,Student 065,student065@uni.mx,Embedded Systems,7
+66,2334957,Student 066,student066@uni.mx,Data Engineering,2
+67,2396374,Student 067,student067@uni.mx,Embedded Systems,6
+68,2365519,Student 068,student068@uni.mx,Embedded Systems,8
+69,2317100,Student 069,student069@uni.mx,Data Engineering,1
+70,2362772,Student 070,student070@uni.mx,Biotechnology,2
+71,2342591,Student 071,student071@uni.mx,Robotics,4
+72,2380292,Student 072,student072@uni.mx,Embedded Systems,3
+73,2365296,Student 073,student073@uni.mx,Robotics,5
+74,2370637,Student 074,student074@uni.mx,Robotics,2
+75,2368082,Student 075,student075@uni.mx,Data Engineering,1
+76,2395477,Student 076,student076@uni.mx,Data Engineering,2
+77,2340982,Student 077,student077@uni.mx,Robotics,7
+78,2373653,Student 078,student078@uni.mx,Embedded Systems,4
+79,2362565,Student 079,student079@uni.mx,Data Engineering,3
+80,2359672,Student 080,student080@uni.mx,Data Engineering,7
+81,2344760,Student 081,student081@uni.mx,Embedded Systems,5
+82,2365444,Student 082,student082@uni.mx,Embedded Systems,3
+83,2334890,Student 083,student083@uni.mx,Biotechnology,4
+84,2317665,Student 084,student084@uni.mx,Data Engineering,6
+85,2317492,Student 085,student085@uni.mx,Data Engineering,8
+86,2375909,Student 086,student086@uni.mx,Robotics,1
+87,2376562,Student 087,student087@uni.mx,Data Engineering,3
+88,2318981,Student 088,student088@uni.mx,Data Engineering,4
+89,2362923,Student 089,student089@uni.mx,Data Engineering,4
+90,2385880,Student 090,student090@uni.mx,Data Engineering,2
+91,2364948,Student 091,student091@uni.mx,Biotechnology,5
+92,2336772,Student 092,student092@uni.mx,Biotechnology,4
+93,2344814,Student 093,student093@uni.mx,Embedded Systems,3
+94,2398039,Student 094,student094@uni.mx,Biotechnology,8
+95,2351441,Student 095,student095@uni.mx,Data Engineering,1
+96,2370068,Student 096,student096@uni.mx,Data Engineering,2
+97,2380468,Student 097,student097@uni.mx,Robotics,5
+98,2327361,Student 098,student098@uni.mx,Biotechnology,2
+99,2342018,Student 099,student099@uni.mx,Biotechnology,5
+100,2330676,Student 100,student100@uni.mx,Embedded Systems,5
+101,2390173,Student 101,student101@uni.mx,Data Engineering,5
+102,2396951,Student 102,student102@uni.mx,Data Engineering,3
+103,2344664,Student 103,student103@uni.mx,Data Engineering,2
+104,2382512,Student 104,student104@uni.mx,Robotics,5
+105,2346930,Student 105,student105@uni.mx,Robotics,6
+106,2336685,Student 106,student106@uni.mx,Biotechnology,8
+107,2342914,Student 107,student107@uni.mx,Data Engineering,2
+108,2393136,Student 108,student108@uni.mx,Embedded Systems,5
+109,2315778,Student 109,student109@uni.mx,Data Engineering,6
+110,2327146,Student 110,student110@uni.mx,Biotechnology,3
+111,2367912,Student 111,student111@uni.mx,Embedded Systems,1
+112,2324663,Student 112,student112@uni.mx,Data Engineering,3
+113,2381511,Student 113,student113@uni.mx,Data Engineering,6
+114,2386350,Student 114,student114@uni.mx,Robotics,7
+115,2326704,Student 115,student115@uni.mx,Data Engineering,5
+116,2357795,Student 116,student116@uni.mx,Data Engineering,6
+117,2337535,Student 117,student117@uni.mx,Robotics,2
+118,2356357,Student 118,student118@uni.mx,Embedded Systems,3
+119,2341029,Student 119,student119@uni.mx,Robotics,3
+120,2364040,Student 120,student120@uni.mx,Data Engineering,3
+121,2353540,Student 121,student121@uni.mx,Embedded Systems,4
+122,2344970,Student 122,student122@uni.mx,Robotics,2
+123,2360140,Student 123,student123@uni.mx,Data Engineering,8
+124,2339154,Student 124,student124@uni.mx,Robotics,8
+125,2355830,Student 125,student125@uni.mx,Biotechnology,4
+126,2339219,Student 126,student126@uni.mx,Data Engineering,4
+127,2362227,Student 127,student127@uni.mx,Biotechnology,5
+128,2319099,Student 128,student128@uni.mx,Biotechnology,6
+129,2394080,Student 129,student129@uni.mx,Embedded Systems,6
+130,2313617,Student 130,student130@uni.mx,Data Engineering,5
+131,2333405,Student 131,student131@uni.mx,Biotechnology,1
+132,2324208,Student 132,student132@uni.mx,Embedded Systems,6
+133,2351114,Student 133,student133@uni.mx,Embedded Systems,2
+134,2360488,Student 134,student134@uni.mx,Robotics,5
+135,2315817,Student 135,student135@uni.mx,Embedded Systems,1
+136,2378146,Student 136,student136@uni.mx,Robotics,6
+137,2366531,Student 137,student137@uni.mx,Data Engineering,6
+138,2391678,Student 138,student138@uni.mx,Biotechnology,2
+139,2349363,Student 139,student139@uni.mx,Biotechnology,7
+140,2352753,Student 140,student140@uni.mx,Embedded Systems,5
+141,2382667,Student 141,student141@uni.mx,Robotics,4
+142,2365108,Student 142,student142@uni.mx,Embedded Systems,3
+143,2390676,Student 143,student143@uni.mx,Biotechnology,7
+144,2381819,Student 144,student144@uni.mx,Data Engineering,5
+145,2347606,Student 145,student145@uni.mx,Robotics,7
+146,2386019,Student 146,student146@uni.mx,Biotechnology,8
+147,2367905,Student 147,student147@uni.mx,Embedded Systems,4
+148,2377000,Student 148,student148@uni.mx,Embedded Systems,3
+149,2396356,Student 149,student149@uni.mx,Data Engineering,5
+150,2377561,Student 150,student150@uni.mx,Biotechnology,2
+151,2340784,Student 151,student151@uni.mx,Biotechnology,4
+152,2336100,Student 152,student152@uni.mx,Robotics,1
+153,2316057,Student 153,student153@uni.mx,Robotics,8
+154,2390120,Student 154,student154@uni.mx,Data Engineering,8
+155,2364321,Student 155,student155@uni.mx,Robotics,7
+156,2374799,Student 156,student156@uni.mx,Embedded Systems,4
+157,2329342,Student 157,student157@uni.mx,Data Engineering,2
+158,2365724,Student 158,student158@uni.mx,Robotics,3
+159,2377889,Student 159,student159@uni.mx,Embedded Systems,1
+160,2383060,Student 160,student160@uni.mx,Robotics,2
+161,2369829,Student 161,student161@uni.mx,Robotics,8
+162,2397500,Student 162,student162@uni.mx,Biotechnology,8
+163,2390301,Student 163,student163@uni.mx,Embedded Systems,8
+164,2330861,Student 164,student164@uni.mx,Embedded Systems,8
+165,2343972,Student 165,student165@uni.mx,Robotics,5
+166,2378327,Student 166,student166@uni.mx,Embedded Systems,4
+167,2345992,Student 167,student167@uni.mx,Embedded Systems,2
+168,2347450,Student 168,student168@uni.mx,Robotics,5
+169,2354020,Student 169,student169@uni.mx,Biotechnology,2
+170,2328136,Student 170,student170@uni.mx,Robotics,4
+171,2360205,Student 171,student171@uni.mx,Robotics,4
+172,2318418,Student 172,student172@uni.mx,Embedded Systems,7
+173,2353369,Student 173,student173@uni.mx,Embedded Systems,7
+174,2318161,Student 174,student174@uni.mx,Robotics,7
+175,2361049,Student 175,student175@uni.mx,Data Engineering,7
+176,2372518,Student 176,student176@uni.mx,Data Engineering,6
+177,2349139,Student 177,student177@uni.mx,Embedded Systems,7
+178,2380545,Student 178,student178@uni.mx,Robotics,8
+179,2338760,Student 179,student179@uni.mx,Biotechnology,7
+180,2373654,Student 180,student180@uni.mx,Data Engineering,7
+181,2354057,Student 181,student181@uni.mx,Embedded Systems,3
+182,2371261,Student 182,student182@uni.mx,Robotics,1
+183,2361645,Student 183,student183@uni.mx,Data Engineering,2
+184,2394246,Student 184,student184@uni.mx,Embedded Systems,3
+185,2370515,Student 185,student185@uni.mx,Robotics,1
+186,2344099,Student 186,student186@uni.mx,Embedded Systems,6
+187,2337742,Student 187,student187@uni.mx,Embedded Systems,6
+188,2354236,Student 188,student188@uni.mx,Embedded Systems,5
+189,2365255,Student 189,student189@uni.mx,Biotechnology,2
+190,2371644,Student 190,student190@uni.mx,Data Engineering,1
+191,2355870,Student 191,student191@uni.mx,Robotics,2
+192,2395426,Student 192,student192@uni.mx,Data Engineering,1
+193,2342411,Student 193,student193@uni.mx,Robotics,1
+194,2391439,Student 194,student194@uni.mx,Robotics,4
+195,2326544,Student 195,student195@uni.mx,Embedded Systems,2
+196,2383920,Student 196,student196@uni.mx,Robotics,8
+197,2343586,Student 197,student197@uni.mx,Biotechnology,3
+198,2389415,Student 198,student198@uni.mx,Data Engineering,3
+199,2350768,Student 199,student199@uni.mx,Data Engineering,1
+200,2350888,Student 200,student200@uni.mx,Embedded Systems,7

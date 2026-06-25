@@ -1,0 +1,1602 @@
+[
+  {
+    "student_id": 1,
+    "control_num": "2393810",
+    "full_name": "Student 001",
+    "email": "student001@uni.mx",
+    "career": "Data Engineering",
+    "semester": 1
+  },
+  {
+    "student_id": 2,
+    "control_num": "2346048",
+    "full_name": "Student 002",
+    "email": "student002@uni.mx",
+    "career": "Robotics",
+    "semester": 4
+  },
+  {
+    "student_id": 3,
+    "control_num": "2328289",
+    "full_name": "Student 003",
+    "email": "student003@uni.mx",
+    "career": "Data Engineering",
+    "semester": 2
+  },
+  {
+    "student_id": 4,
+    "control_num": "2387397",
+    "full_name": "Student 004",
+    "email": "student004@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 1
+  },
+  {
+    "student_id": 5,
+    "control_num": "2313905",
+    "full_name": "Student 005",
+    "email": "student005@uni.mx",
+    "career": "Data Engineering",
+    "semester": 4
+  },
+  {
+    "student_id": 6,
+    "control_num": "2340495",
+    "full_name": "Student 006",
+    "email": "student006@uni.mx",
+    "career": "Data Engineering",
+    "semester": 4
+  },
+  {
+    "student_id": 7,
+    "control_num": "2395181",
+    "full_name": "Student 007",
+    "email": "student007@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 4
+  },
+  {
+    "student_id": 8,
+    "control_num": "2368878",
+    "full_name": "Student 008",
+    "email": "student008@uni.mx",
+    "career": "Biotechnology",
+    "semester": 1
+  },
+  {
+    "student_id": 9,
+    "control_num": "2330926",
+    "full_name": "Student 009",
+    "email": "student009@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 6
+  },
+  {
+    "student_id": 10,
+    "control_num": "2346421",
+    "full_name": "Student 010",
+    "email": "student010@uni.mx",
+    "career": "Robotics",
+    "semester": 4
+  },
+  {
+    "student_id": 11,
+    "control_num": "2354118",
+    "full_name": "Student 011",
+    "email": "student011@uni.mx",
+    "career": "Data Engineering",
+    "semester": 2
+  },
+  {
+    "student_id": 12,
+    "control_num": "2359797",
+    "full_name": "Student 012",
+    "email": "student012@uni.mx",
+    "career": "Data Engineering",
+    "semester": 6
+  },
+  {
+    "student_id": 13,
+    "control_num": "2355082",
+    "full_name": "Student 013",
+    "email": "student013@uni.mx",
+    "career": "Biotechnology",
+    "semester": 1
+  },
+  {
+    "student_id": 14,
+    "control_num": "2370217",
+    "full_name": "Student 014",
+    "email": "student014@uni.mx",
+    "career": "Data Engineering",
+    "semester": 7
+  },
+  {
+    "student_id": 15,
+    "control_num": "2320328",
+    "full_name": "Student 015",
+    "email": "student015@uni.mx",
+    "career": "Biotechnology",
+    "semester": 6
+  },
+  {
+    "student_id": 16,
+    "control_num": "2385674",
+    "full_name": "Student 016",
+    "email": "student016@uni.mx",
+    "career": "Robotics",
+    "semester": 2
+  },
+  {
+    "student_id": 17,
+    "control_num": "2316006",
+    "full_name": "Student 017",
+    "email": "student017@uni.mx",
+    "career": "Robotics",
+    "semester": 5
+  },
+  {
+    "student_id": 18,
+    "control_num": "2320458",
+    "full_name": "Student 018",
+    "email": "student018@uni.mx",
+    "career": "Robotics",
+    "semester": 2
+  },
+  {
+    "student_id": 19,
+    "control_num": "2359823",
+    "full_name": "Student 019",
+    "email": "student019@uni.mx",
+    "career": "Biotechnology",
+    "semester": 8
+  },
+  {
+    "student_id": 20,
+    "control_num": "2393320",
+    "full_name": "Student 020",
+    "email": "student020@uni.mx",
+    "career": "Biotechnology",
+    "semester": 3
+  },
+  {
+    "student_id": 21,
+    "control_num": "2358520",
+    "full_name": "Student 021",
+    "email": "student021@uni.mx",
+    "career": "Biotechnology",
+    "semester": 4
+  },
+  {
+    "student_id": 22,
+    "control_num": "2397841",
+    "full_name": "Student 022",
+    "email": "student022@uni.mx",
+    "career": "Biotechnology",
+    "semester": 2
+  },
+  {
+    "student_id": 23,
+    "control_num": "2389840",
+    "full_name": "Student 023",
+    "email": "student023@uni.mx",
+    "career": "Robotics",
+    "semester": 4
+  },
+  {
+    "student_id": 24,
+    "control_num": "2331417",
+    "full_name": "Student 024",
+    "email": "student024@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 7
+  },
+  {
+    "student_id": 25,
+    "control_num": "2345382",
+    "full_name": "Student 025",
+    "email": "student025@uni.mx",
+    "career": "Robotics",
+    "semester": 6
+  },
+  {
+    "student_id": 26,
+    "control_num": "2317331",
+    "full_name": "Student 026",
+    "email": "student026@uni.mx",
+    "career": "Robotics",
+    "semester": 1
+  },
+  {
+    "student_id": 27,
+    "control_num": "2351347",
+    "full_name": "Student 027",
+    "email": "student027@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 5
+  },
+  {
+    "student_id": 28,
+    "control_num": "2318675",
+    "full_name": "Student 028",
+    "email": "student028@uni.mx",
+    "career": "Robotics",
+    "semester": 6
+  },
+  {
+    "student_id": 29,
+    "control_num": "2337869",
+    "full_name": "Student 029",
+    "email": "student029@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 7
+  },
+  {
+    "student_id": 30,
+    "control_num": "2394259",
+    "full_name": "Student 030",
+    "email": "student030@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 3
+  },
+  {
+    "student_id": 31,
+    "control_num": "2344718",
+    "full_name": "Student 031",
+    "email": "student031@uni.mx",
+    "career": "Robotics",
+    "semester": 4
+  },
+  {
+    "student_id": 32,
+    "control_num": "2383579",
+    "full_name": "Student 032",
+    "email": "student032@uni.mx",
+    "career": "Biotechnology",
+    "semester": 7
+  },
+  {
+    "student_id": 33,
+    "control_num": "2386484",
+    "full_name": "Student 033",
+    "email": "student033@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 6
+  },
+  {
+    "student_id": 34,
+    "control_num": "2338746",
+    "full_name": "Student 034",
+    "email": "student034@uni.mx",
+    "career": "Robotics",
+    "semester": 8
+  },
+  {
+    "student_id": 35,
+    "control_num": "2321915",
+    "full_name": "Student 035",
+    "email": "student035@uni.mx",
+    "career": "Data Engineering",
+    "semester": 2
+  },
+  {
+    "student_id": 36,
+    "control_num": "2330033",
+    "full_name": "Student 036",
+    "email": "student036@uni.mx",
+    "career": "Robotics",
+    "semester": 7
+  },
+  {
+    "student_id": 37,
+    "control_num": "2388172",
+    "full_name": "Student 037",
+    "email": "student037@uni.mx",
+    "career": "Data Engineering",
+    "semester": 7
+  },
+  {
+    "student_id": 38,
+    "control_num": "2360019",
+    "full_name": "Student 038",
+    "email": "student038@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 5
+  },
+  {
+    "student_id": 39,
+    "control_num": "2382512",
+    "full_name": "Student 039",
+    "email": "student039@uni.mx",
+    "career": "Data Engineering",
+    "semester": 2
+  },
+  {
+    "student_id": 40,
+    "control_num": "2399353",
+    "full_name": "Student 040",
+    "email": "student040@uni.mx",
+    "career": "Biotechnology",
+    "semester": 6
+  },
+  {
+    "student_id": 41,
+    "control_num": "2324621",
+    "full_name": "Student 041",
+    "email": "student041@uni.mx",
+    "career": "Biotechnology",
+    "semester": 7
+  },
+  {
+    "student_id": 42,
+    "control_num": "2330730",
+    "full_name": "Student 042",
+    "email": "student042@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 1
+  },
+  {
+    "student_id": 43,
+    "control_num": "2344522",
+    "full_name": "Student 043",
+    "email": "student043@uni.mx",
+    "career": "Robotics",
+    "semester": 2
+  },
+  {
+    "student_id": 44,
+    "control_num": "2391959",
+    "full_name": "Student 044",
+    "email": "student044@uni.mx",
+    "career": "Biotechnology",
+    "semester": 4
+  },
+  {
+    "student_id": 45,
+    "control_num": "2330032",
+    "full_name": "Student 045",
+    "email": "student045@uni.mx",
+    "career": "Biotechnology",
+    "semester": 3
+  },
+  {
+    "student_id": 46,
+    "control_num": "2380697",
+    "full_name": "Student 046",
+    "email": "student046@uni.mx",
+    "career": "Data Engineering",
+    "semester": 6
+  },
+  {
+    "student_id": 47,
+    "control_num": "2374042",
+    "full_name": "Student 047",
+    "email": "student047@uni.mx",
+    "career": "Data Engineering",
+    "semester": 2
+  },
+  {
+    "student_id": 48,
+    "control_num": "2357576",
+    "full_name": "Student 048",
+    "email": "student048@uni.mx",
+    "career": "Biotechnology",
+    "semester": 4
+  },
+  {
+    "student_id": 49,
+    "control_num": "2317592",
+    "full_name": "Student 049",
+    "email": "student049@uni.mx",
+    "career": "Robotics",
+    "semester": 2
+  },
+  {
+    "student_id": 50,
+    "control_num": "2321226",
+    "full_name": "Student 050",
+    "email": "student050@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 2
+  },
+  {
+    "student_id": 51,
+    "control_num": "2379822",
+    "full_name": "Student 051",
+    "email": "student051@uni.mx",
+    "career": "Robotics",
+    "semester": 3
+  },
+  {
+    "student_id": 52,
+    "control_num": "2396474",
+    "full_name": "Student 052",
+    "email": "student052@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 3
+  },
+  {
+    "student_id": 53,
+    "control_num": "2344741",
+    "full_name": "Student 053",
+    "email": "student053@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 4
+  },
+  {
+    "student_id": 54,
+    "control_num": "2380686",
+    "full_name": "Student 054",
+    "email": "student054@uni.mx",
+    "career": "Robotics",
+    "semester": 5
+  },
+  {
+    "student_id": 55,
+    "control_num": "2362296",
+    "full_name": "Student 055",
+    "email": "student055@uni.mx",
+    "career": "Biotechnology",
+    "semester": 8
+  },
+  {
+    "student_id": 56,
+    "control_num": "2377839",
+    "full_name": "Student 056",
+    "email": "student056@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 2
+  },
+  {
+    "student_id": 57,
+    "control_num": "2342493",
+    "full_name": "Student 057",
+    "email": "student057@uni.mx",
+    "career": "Robotics",
+    "semester": 2
+  },
+  {
+    "student_id": 58,
+    "control_num": "2354313",
+    "full_name": "Student 058",
+    "email": "student058@uni.mx",
+    "career": "Data Engineering",
+    "semester": 4
+  },
+  {
+    "student_id": 59,
+    "control_num": "2387128",
+    "full_name": "Student 059",
+    "email": "student059@uni.mx",
+    "career": "Robotics",
+    "semester": 1
+  },
+  {
+    "student_id": 60,
+    "control_num": "2319305",
+    "full_name": "Student 060",
+    "email": "student060@uni.mx",
+    "career": "Data Engineering",
+    "semester": 4
+  },
+  {
+    "student_id": 61,
+    "control_num": "2318834",
+    "full_name": "Student 061",
+    "email": "student061@uni.mx",
+    "career": "Data Engineering",
+    "semester": 6
+  },
+  {
+    "student_id": 62,
+    "control_num": "2319287",
+    "full_name": "Student 062",
+    "email": "student062@uni.mx",
+    "career": "Robotics",
+    "semester": 5
+  },
+  {
+    "student_id": 63,
+    "control_num": "2397684",
+    "full_name": "Student 063",
+    "email": "student063@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 4
+  },
+  {
+    "student_id": 64,
+    "control_num": "2380678",
+    "full_name": "Student 064",
+    "email": "student064@uni.mx",
+    "career": "Robotics",
+    "semester": 8
+  },
+  {
+    "student_id": 65,
+    "control_num": "2341850",
+    "full_name": "Student 065",
+    "email": "student065@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 7
+  },
+  {
+    "student_id": 66,
+    "control_num": "2334957",
+    "full_name": "Student 066",
+    "email": "student066@uni.mx",
+    "career": "Data Engineering",
+    "semester": 2
+  },
+  {
+    "student_id": 67,
+    "control_num": "2396374",
+    "full_name": "Student 067",
+    "email": "student067@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 6
+  },
+  {
+    "student_id": 68,
+    "control_num": "2365519",
+    "full_name": "Student 068",
+    "email": "student068@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 8
+  },
+  {
+    "student_id": 69,
+    "control_num": "2317100",
+    "full_name": "Student 069",
+    "email": "student069@uni.mx",
+    "career": "Data Engineering",
+    "semester": 1
+  },
+  {
+    "student_id": 70,
+    "control_num": "2362772",
+    "full_name": "Student 070",
+    "email": "student070@uni.mx",
+    "career": "Biotechnology",
+    "semester": 2
+  },
+  {
+    "student_id": 71,
+    "control_num": "2342591",
+    "full_name": "Student 071",
+    "email": "student071@uni.mx",
+    "career": "Robotics",
+    "semester": 4
+  },
+  {
+    "student_id": 72,
+    "control_num": "2380292",
+    "full_name": "Student 072",
+    "email": "student072@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 3
+  },
+  {
+    "student_id": 73,
+    "control_num": "2365296",
+    "full_name": "Student 073",
+    "email": "student073@uni.mx",
+    "career": "Robotics",
+    "semester": 5
+  },
+  {
+    "student_id": 74,
+    "control_num": "2370637",
+    "full_name": "Student 074",
+    "email": "student074@uni.mx",
+    "career": "Robotics",
+    "semester": 2
+  },
+  {
+    "student_id": 75,
+    "control_num": "2368082",
+    "full_name": "Student 075",
+    "email": "student075@uni.mx",
+    "career": "Data Engineering",
+    "semester": 1
+  },
+  {
+    "student_id": 76,
+    "control_num": "2395477",
+    "full_name": "Student 076",
+    "email": "student076@uni.mx",
+    "career": "Data Engineering",
+    "semester": 2
+  },
+  {
+    "student_id": 77,
+    "control_num": "2340982",
+    "full_name": "Student 077",
+    "email": "student077@uni.mx",
+    "career": "Robotics",
+    "semester": 7
+  },
+  {
+    "student_id": 78,
+    "control_num": "2373653",
+    "full_name": "Student 078",
+    "email": "student078@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 4
+  },
+  {
+    "student_id": 79,
+    "control_num": "2362565",
+    "full_name": "Student 079",
+    "email": "student079@uni.mx",
+    "career": "Data Engineering",
+    "semester": 3
+  },
+  {
+    "student_id": 80,
+    "control_num": "2359672",
+    "full_name": "Student 080",
+    "email": "student080@uni.mx",
+    "career": "Data Engineering",
+    "semester": 7
+  },
+  {
+    "student_id": 81,
+    "control_num": "2344760",
+    "full_name": "Student 081",
+    "email": "student081@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 5
+  },
+  {
+    "student_id": 82,
+    "control_num": "2365444",
+    "full_name": "Student 082",
+    "email": "student082@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 3
+  },
+  {
+    "student_id": 83,
+    "control_num": "2334890",
+    "full_name": "Student 083",
+    "email": "student083@uni.mx",
+    "career": "Biotechnology",
+    "semester": 4
+  },
+  {
+    "student_id": 84,
+    "control_num": "2317665",
+    "full_name": "Student 084",
+    "email": "student084@uni.mx",
+    "career": "Data Engineering",
+    "semester": 6
+  },
+  {
+    "student_id": 85,
+    "control_num": "2317492",
+    "full_name": "Student 085",
+    "email": "student085@uni.mx",
+    "career": "Data Engineering",
+    "semester": 8
+  },
+  {
+    "student_id": 86,
+    "control_num": "2375909",
+    "full_name": "Student 086",
+    "email": "student086@uni.mx",
+    "career": "Robotics",
+    "semester": 1
+  },
+  {
+    "student_id": 87,
+    "control_num": "2376562",
+    "full_name": "Student 087",
+    "email": "student087@uni.mx",
+    "career": "Data Engineering",
+    "semester": 3
+  },
+  {
+    "student_id": 88,
+    "control_num": "2318981",
+    "full_name": "Student 088",
+    "email": "student088@uni.mx",
+    "career": "Data Engineering",
+    "semester": 4
+  },
+  {
+    "student_id": 89,
+    "control_num": "2362923",
+    "full_name": "Student 089",
+    "email": "student089@uni.mx",
+    "career": "Data Engineering",
+    "semester": 4
+  },
+  {
+    "student_id": 90,
+    "control_num": "2385880",
+    "full_name": "Student 090",
+    "email": "student090@uni.mx",
+    "career": "Data Engineering",
+    "semester": 2
+  },
+  {
+    "student_id": 91,
+    "control_num": "2364948",
+    "full_name": "Student 091",
+    "email": "student091@uni.mx",
+    "career": "Biotechnology",
+    "semester": 5
+  },
+  {
+    "student_id": 92,
+    "control_num": "2336772",
+    "full_name": "Student 092",
+    "email": "student092@uni.mx",
+    "career": "Biotechnology",
+    "semester": 4
+  },
+  {
+    "student_id": 93,
+    "control_num": "2344814",
+    "full_name": "Student 093",
+    "email": "student093@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 3
+  },
+  {
+    "student_id": 94,
+    "control_num": "2398039",
+    "full_name": "Student 094",
+    "email": "student094@uni.mx",
+    "career": "Biotechnology",
+    "semester": 8
+  },
+  {
+    "student_id": 95,
+    "control_num": "2351441",
+    "full_name": "Student 095",
+    "email": "student095@uni.mx",
+    "career": "Data Engineering",
+    "semester": 1
+  },
+  {
+    "student_id": 96,
+    "control_num": "2370068",
+    "full_name": "Student 096",
+    "email": "student096@uni.mx",
+    "career": "Data Engineering",
+    "semester": 2
+  },
+  {
+    "student_id": 97,
+    "control_num": "2380468",
+    "full_name": "Student 097",
+    "email": "student097@uni.mx",
+    "career": "Robotics",
+    "semester": 5
+  },
+  {
+    "student_id": 98,
+    "control_num": "2327361",
+    "full_name": "Student 098",
+    "email": "student098@uni.mx",
+    "career": "Biotechnology",
+    "semester": 2
+  },
+  {
+    "student_id": 99,
+    "control_num": "2342018",
+    "full_name": "Student 099",
+    "email": "student099@uni.mx",
+    "career": "Biotechnology",
+    "semester": 5
+  },
+  {
+    "student_id": 100,
+    "control_num": "2330676",
+    "full_name": "Student 100",
+    "email": "student100@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 5
+  },
+  {
+    "student_id": 101,
+    "control_num": "2390173",
+    "full_name": "Student 101",
+    "email": "student101@uni.mx",
+    "career": "Data Engineering",
+    "semester": 5
+  },
+  {
+    "student_id": 102,
+    "control_num": "2396951",
+    "full_name": "Student 102",
+    "email": "student102@uni.mx",
+    "career": "Data Engineering",
+    "semester": 3
+  },
+  {
+    "student_id": 103,
+    "control_num": "2344664",
+    "full_name": "Student 103",
+    "email": "student103@uni.mx",
+    "career": "Data Engineering",
+    "semester": 2
+  },
+  {
+    "student_id": 104,
+    "control_num": "2382512",
+    "full_name": "Student 104",
+    "email": "student104@uni.mx",
+    "career": "Robotics",
+    "semester": 5
+  },
+  {
+    "student_id": 105,
+    "control_num": "2346930",
+    "full_name": "Student 105",
+    "email": "student105@uni.mx",
+    "career": "Robotics",
+    "semester": 6
+  },
+  {
+    "student_id": 106,
+    "control_num": "2336685",
+    "full_name": "Student 106",
+    "email": "student106@uni.mx",
+    "career": "Biotechnology",
+    "semester": 8
+  },
+  {
+    "student_id": 107,
+    "control_num": "2342914",
+    "full_name": "Student 107",
+    "email": "student107@uni.mx",
+    "career": "Data Engineering",
+    "semester": 2
+  },
+  {
+    "student_id": 108,
+    "control_num": "2393136",
+    "full_name": "Student 108",
+    "email": "student108@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 5
+  },
+  {
+    "student_id": 109,
+    "control_num": "2315778",
+    "full_name": "Student 109",
+    "email": "student109@uni.mx",
+    "career": "Data Engineering",
+    "semester": 6
+  },
+  {
+    "student_id": 110,
+    "control_num": "2327146",
+    "full_name": "Student 110",
+    "email": "student110@uni.mx",
+    "career": "Biotechnology",
+    "semester": 3
+  },
+  {
+    "student_id": 111,
+    "control_num": "2367912",
+    "full_name": "Student 111",
+    "email": "student111@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 1
+  },
+  {
+    "student_id": 112,
+    "control_num": "2324663",
+    "full_name": "Student 112",
+    "email": "student112@uni.mx",
+    "career": "Data Engineering",
+    "semester": 3
+  },
+  {
+    "student_id": 113,
+    "control_num": "2381511",
+    "full_name": "Student 113",
+    "email": "student113@uni.mx",
+    "career": "Data Engineering",
+    "semester": 6
+  },
+  {
+    "student_id": 114,
+    "control_num": "2386350",
+    "full_name": "Student 114",
+    "email": "student114@uni.mx",
+    "career": "Robotics",
+    "semester": 7
+  },
+  {
+    "student_id": 115,
+    "control_num": "2326704",
+    "full_name": "Student 115",
+    "email": "student115@uni.mx",
+    "career": "Data Engineering",
+    "semester": 5
+  },
+  {
+    "student_id": 116,
+    "control_num": "2357795",
+    "full_name": "Student 116",
+    "email": "student116@uni.mx",
+    "career": "Data Engineering",
+    "semester": 6
+  },
+  {
+    "student_id": 117,
+    "control_num": "2337535",
+    "full_name": "Student 117",
+    "email": "student117@uni.mx",
+    "career": "Robotics",
+    "semester": 2
+  },
+  {
+    "student_id": 118,
+    "control_num": "2356357",
+    "full_name": "Student 118",
+    "email": "student118@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 3
+  },
+  {
+    "student_id": 119,
+    "control_num": "2341029",
+    "full_name": "Student 119",
+    "email": "student119@uni.mx",
+    "career": "Robotics",
+    "semester": 3
+  },
+  {
+    "student_id": 120,
+    "control_num": "2364040",
+    "full_name": "Student 120",
+    "email": "student120@uni.mx",
+    "career": "Data Engineering",
+    "semester": 3
+  },
+  {
+    "student_id": 121,
+    "control_num": "2353540",
+    "full_name": "Student 121",
+    "email": "student121@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 4
+  },
+  {
+    "student_id": 122,
+    "control_num": "2344970",
+    "full_name": "Student 122",
+    "email": "student122@uni.mx",
+    "career": "Robotics",
+    "semester": 2
+  },
+  {
+    "student_id": 123,
+    "control_num": "2360140",
+    "full_name": "Student 123",
+    "email": "student123@uni.mx",
+    "career": "Data Engineering",
+    "semester": 8
+  },
+  {
+    "student_id": 124,
+    "control_num": "2339154",
+    "full_name": "Student 124",
+    "email": "student124@uni.mx",
+    "career": "Robotics",
+    "semester": 8
+  },
+  {
+    "student_id": 125,
+    "control_num": "2355830",
+    "full_name": "Student 125",
+    "email": "student125@uni.mx",
+    "career": "Biotechnology",
+    "semester": 4
+  },
+  {
+    "student_id": 126,
+    "control_num": "2339219",
+    "full_name": "Student 126",
+    "email": "student126@uni.mx",
+    "career": "Data Engineering",
+    "semester": 4
+  },
+  {
+    "student_id": 127,
+    "control_num": "2362227",
+    "full_name": "Student 127",
+    "email": "student127@uni.mx",
+    "career": "Biotechnology",
+    "semester": 5
+  },
+  {
+    "student_id": 128,
+    "control_num": "2319099",
+    "full_name": "Student 128",
+    "email": "student128@uni.mx",
+    "career": "Biotechnology",
+    "semester": 6
+  },
+  {
+    "student_id": 129,
+    "control_num": "2394080",
+    "full_name": "Student 129",
+    "email": "student129@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 6
+  },
+  {
+    "student_id": 130,
+    "control_num": "2313617",
+    "full_name": "Student 130",
+    "email": "student130@uni.mx",
+    "career": "Data Engineering",
+    "semester": 5
+  },
+  {
+    "student_id": 131,
+    "control_num": "2333405",
+    "full_name": "Student 131",
+    "email": "student131@uni.mx",
+    "career": "Biotechnology",
+    "semester": 1
+  },
+  {
+    "student_id": 132,
+    "control_num": "2324208",
+    "full_name": "Student 132",
+    "email": "student132@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 6
+  },
+  {
+    "student_id": 133,
+    "control_num": "2351114",
+    "full_name": "Student 133",
+    "email": "student133@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 2
+  },
+  {
+    "student_id": 134,
+    "control_num": "2360488",
+    "full_name": "Student 134",
+    "email": "student134@uni.mx",
+    "career": "Robotics",
+    "semester": 5
+  },
+  {
+    "student_id": 135,
+    "control_num": "2315817",
+    "full_name": "Student 135",
+    "email": "student135@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 1
+  },
+  {
+    "student_id": 136,
+    "control_num": "2378146",
+    "full_name": "Student 136",
+    "email": "student136@uni.mx",
+    "career": "Robotics",
+    "semester": 6
+  },
+  {
+    "student_id": 137,
+    "control_num": "2366531",
+    "full_name": "Student 137",
+    "email": "student137@uni.mx",
+    "career": "Data Engineering",
+    "semester": 6
+  },
+  {
+    "student_id": 138,
+    "control_num": "2391678",
+    "full_name": "Student 138",
+    "email": "student138@uni.mx",
+    "career": "Biotechnology",
+    "semester": 2
+  },
+  {
+    "student_id": 139,
+    "control_num": "2349363",
+    "full_name": "Student 139",
+    "email": "student139@uni.mx",
+    "career": "Biotechnology",
+    "semester": 7
+  },
+  {
+    "student_id": 140,
+    "control_num": "2352753",
+    "full_name": "Student 140",
+    "email": "student140@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 5
+  },
+  {
+    "student_id": 141,
+    "control_num": "2382667",
+    "full_name": "Student 141",
+    "email": "student141@uni.mx",
+    "career": "Robotics",
+    "semester": 4
+  },
+  {
+    "student_id": 142,
+    "control_num": "2365108",
+    "full_name": "Student 142",
+    "email": "student142@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 3
+  },
+  {
+    "student_id": 143,
+    "control_num": "2390676",
+    "full_name": "Student 143",
+    "email": "student143@uni.mx",
+    "career": "Biotechnology",
+    "semester": 7
+  },
+  {
+    "student_id": 144,
+    "control_num": "2381819",
+    "full_name": "Student 144",
+    "email": "student144@uni.mx",
+    "career": "Data Engineering",
+    "semester": 5
+  },
+  {
+    "student_id": 145,
+    "control_num": "2347606",
+    "full_name": "Student 145",
+    "email": "student145@uni.mx",
+    "career": "Robotics",
+    "semester": 7
+  },
+  {
+    "student_id": 146,
+    "control_num": "2386019",
+    "full_name": "Student 146",
+    "email": "student146@uni.mx",
+    "career": "Biotechnology",
+    "semester": 8
+  },
+  {
+    "student_id": 147,
+    "control_num": "2367905",
+    "full_name": "Student 147",
+    "email": "student147@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 4
+  },
+  {
+    "student_id": 148,
+    "control_num": "2377000",
+    "full_name": "Student 148",
+    "email": "student148@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 3
+  },
+  {
+    "student_id": 149,
+    "control_num": "2396356",
+    "full_name": "Student 149",
+    "email": "student149@uni.mx",
+    "career": "Data Engineering",
+    "semester": 5
+  },
+  {
+    "student_id": 150,
+    "control_num": "2377561",
+    "full_name": "Student 150",
+    "email": "student150@uni.mx",
+    "career": "Biotechnology",
+    "semester": 2
+  },
+  {
+    "student_id": 151,
+    "control_num": "2340784",
+    "full_name": "Student 151",
+    "email": "student151@uni.mx",
+    "career": "Biotechnology",
+    "semester": 4
+  },
+  {
+    "student_id": 152,
+    "control_num": "2336100",
+    "full_name": "Student 152",
+    "email": "student152@uni.mx",
+    "career": "Robotics",
+    "semester": 1
+  },
+  {
+    "student_id": 153,
+    "control_num": "2316057",
+    "full_name": "Student 153",
+    "email": "student153@uni.mx",
+    "career": "Robotics",
+    "semester": 8
+  },
+  {
+    "student_id": 154,
+    "control_num": "2390120",
+    "full_name": "Student 154",
+    "email": "student154@uni.mx",
+    "career": "Data Engineering",
+    "semester": 8
+  },
+  {
+    "student_id": 155,
+    "control_num": "2364321",
+    "full_name": "Student 155",
+    "email": "student155@uni.mx",
+    "career": "Robotics",
+    "semester": 7
+  },
+  {
+    "student_id": 156,
+    "control_num": "2374799",
+    "full_name": "Student 156",
+    "email": "student156@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 4
+  },
+  {
+    "student_id": 157,
+    "control_num": "2329342",
+    "full_name": "Student 157",
+    "email": "student157@uni.mx",
+    "career": "Data Engineering",
+    "semester": 2
+  },
+  {
+    "student_id": 158,
+    "control_num": "2365724",
+    "full_name": "Student 158",
+    "email": "student158@uni.mx",
+    "career": "Robotics",
+    "semester": 3
+  },
+  {
+    "student_id": 159,
+    "control_num": "2377889",
+    "full_name": "Student 159",
+    "email": "student159@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 1
+  },
+  {
+    "student_id": 160,
+    "control_num": "2383060",
+    "full_name": "Student 160",
+    "email": "student160@uni.mx",
+    "career": "Robotics",
+    "semester": 2
+  },
+  {
+    "student_id": 161,
+    "control_num": "2369829",
+    "full_name": "Student 161",
+    "email": "student161@uni.mx",
+    "career": "Robotics",
+    "semester": 8
+  },
+  {
+    "student_id": 162,
+    "control_num": "2397500",
+    "full_name": "Student 162",
+    "email": "student162@uni.mx",
+    "career": "Biotechnology",
+    "semester": 8
+  },
+  {
+    "student_id": 163,
+    "control_num": "2390301",
+    "full_name": "Student 163",
+    "email": "student163@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 8
+  },
+  {
+    "student_id": 164,
+    "control_num": "2330861",
+    "full_name": "Student 164",
+    "email": "student164@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 8
+  },
+  {
+    "student_id": 165,
+    "control_num": "2343972",
+    "full_name": "Student 165",
+    "email": "student165@uni.mx",
+    "career": "Robotics",
+    "semester": 5
+  },
+  {
+    "student_id": 166,
+    "control_num": "2378327",
+    "full_name": "Student 166",
+    "email": "student166@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 4
+  },
+  {
+    "student_id": 167,
+    "control_num": "2345992",
+    "full_name": "Student 167",
+    "email": "student167@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 2
+  },
+  {
+    "student_id": 168,
+    "control_num": "2347450",
+    "full_name": "Student 168",
+    "email": "student168@uni.mx",
+    "career": "Robotics",
+    "semester": 5
+  },
+  {
+    "student_id": 169,
+    "control_num": "2354020",
+    "full_name": "Student 169",
+    "email": "student169@uni.mx",
+    "career": "Biotechnology",
+    "semester": 2
+  },
+  {
+    "student_id": 170,
+    "control_num": "2328136",
+    "full_name": "Student 170",
+    "email": "student170@uni.mx",
+    "career": "Robotics",
+    "semester": 4
+  },
+  {
+    "student_id": 171,
+    "control_num": "2360205",
+    "full_name": "Student 171",
+    "email": "student171@uni.mx",
+    "career": "Robotics",
+    "semester": 4
+  },
+  {
+    "student_id": 172,
+    "control_num": "2318418",
+    "full_name": "Student 172",
+    "email": "student172@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 7
+  },
+  {
+    "student_id": 173,
+    "control_num": "2353369",
+    "full_name": "Student 173",
+    "email": "student173@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 7
+  },
+  {
+    "student_id": 174,
+    "control_num": "2318161",
+    "full_name": "Student 174",
+    "email": "student174@uni.mx",
+    "career": "Robotics",
+    "semester": 7
+  },
+  {
+    "student_id": 175,
+    "control_num": "2361049",
+    "full_name": "Student 175",
+    "email": "student175@uni.mx",
+    "career": "Data Engineering",
+    "semester": 7
+  },
+  {
+    "student_id": 176,
+    "control_num": "2372518",
+    "full_name": "Student 176",
+    "email": "student176@uni.mx",
+    "career": "Data Engineering",
+    "semester": 6
+  },
+  {
+    "student_id": 177,
+    "control_num": "2349139",
+    "full_name": "Student 177",
+    "email": "student177@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 7
+  },
+  {
+    "student_id": 178,
+    "control_num": "2380545",
+    "full_name": "Student 178",
+    "email": "student178@uni.mx",
+    "career": "Robotics",
+    "semester": 8
+  },
+  {
+    "student_id": 179,
+    "control_num": "2338760",
+    "full_name": "Student 179",
+    "email": "student179@uni.mx",
+    "career": "Biotechnology",
+    "semester": 7
+  },
+  {
+    "student_id": 180,
+    "control_num": "2373654",
+    "full_name": "Student 180",
+    "email": "student180@uni.mx",
+    "career": "Data Engineering",
+    "semester": 7
+  },
+  {
+    "student_id": 181,
+    "control_num": "2354057",
+    "full_name": "Student 181",
+    "email": "student181@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 3
+  },
+  {
+    "student_id": 182,
+    "control_num": "2371261",
+    "full_name": "Student 182",
+    "email": "student182@uni.mx",
+    "career": "Robotics",
+    "semester": 1
+  },
+  {
+    "student_id": 183,
+    "control_num": "2361645",
+    "full_name": "Student 183",
+    "email": "student183@uni.mx",
+    "career": "Data Engineering",
+    "semester": 2
+  },
+  {
+    "student_id": 184,
+    "control_num": "2394246",
+    "full_name": "Student 184",
+    "email": "student184@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 3
+  },
+  {
+    "student_id": 185,
+    "control_num": "2370515",
+    "full_name": "Student 185",
+    "email": "student185@uni.mx",
+    "career": "Robotics",
+    "semester": 1
+  },
+  {
+    "student_id": 186,
+    "control_num": "2344099",
+    "full_name": "Student 186",
+    "email": "student186@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 6
+  },
+  {
+    "student_id": 187,
+    "control_num": "2337742",
+    "full_name": "Student 187",
+    "email": "student187@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 6
+  },
+  {
+    "student_id": 188,
+    "control_num": "2354236",
+    "full_name": "Student 188",
+    "email": "student188@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 5
+  },
+  {
+    "student_id": 189,
+    "control_num": "2365255",
+    "full_name": "Student 189",
+    "email": "student189@uni.mx",
+    "career": "Biotechnology",
+    "semester": 2
+  },
+  {
+    "student_id": 190,
+    "control_num": "2371644",
+    "full_name": "Student 190",
+    "email": "student190@uni.mx",
+    "career": "Data Engineering",
+    "semester": 1
+  },
+  {
+    "student_id": 191,
+    "control_num": "2355870",
+    "full_name": "Student 191",
+    "email": "student191@uni.mx",
+    "career": "Robotics",
+    "semester": 2
+  },
+  {
+    "student_id": 192,
+    "control_num": "2395426",
+    "full_name": "Student 192",
+    "email": "student192@uni.mx",
+    "career": "Data Engineering",
+    "semester": 1
+  },
+  {
+    "student_id": 193,
+    "control_num": "2342411",
+    "full_name": "Student 193",
+    "email": "student193@uni.mx",
+    "career": "Robotics",
+    "semester": 1
+  },
+  {
+    "student_id": 194,
+    "control_num": "2391439",
+    "full_name": "Student 194",
+    "email": "student194@uni.mx",
+    "career": "Robotics",
+    "semester": 4
+  },
+  {
+    "student_id": 195,
+    "control_num": "2326544",
+    "full_name": "Student 195",
+    "email": "student195@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 2
+  },
+  {
+    "student_id": 196,
+    "control_num": "2383920",
+    "full_name": "Student 196",
+    "email": "student196@uni.mx",
+    "career": "Robotics",
+    "semester": 8
+  },
+  {
+    "student_id": 197,
+    "control_num": "2343586",
+    "full_name": "Student 197",
+    "email": "student197@uni.mx",
+    "career": "Biotechnology",
+    "semester": 3
+  },
+  {
+    "student_id": 198,
+    "control_num": "2389415",
+    "full_name": "Student 198",
+    "email": "student198@uni.mx",
+    "career": "Data Engineering",
+    "semester": 3
+  },
+  {
+    "student_id": 199,
+    "control_num": "2350768",
+    "full_name": "Student 199",
+    "email": "student199@uni.mx",
+    "career": "Data Engineering",
+    "semester": 1
+  },
+  {
+    "student_id": 200,
+    "control_num": "2350888",
+    "full_name": "Student 200",
+    "email": "student200@uni.mx",
+    "career": "Embedded Systems",
+    "semester": 7
+  }
+]
