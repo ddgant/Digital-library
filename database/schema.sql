@@ -1,112 +1,132 @@
 -- ============================================================
---  TeamX Academic Management Platform — Database Schema
+--  TeamX Digital Library Platform — Database Schema
 --  Author: Mauricio Gabriel Ramírez Rubio (2309192)
 --  Role:   Database Design
+--
+--  This schema supports all five research questions:
+--  [Arturo] filter usage vs. search-to-click conversion
+--  [Diego]  subject traffic across the four career programs
+--  [Rous]   single-tag vs. multi-tag book view counts
+--  [Rodri]  browsing depth vs. save probability
+--  [Mau]    session duration vs. distinct subjects visited
 -- ============================================================
 
--- Drop tables in reverse dependency order
-DROP TABLE IF EXISTS attendance;
-DROP TABLE IF EXISTS grades;
-DROP TABLE IF EXISTS enrollments;
-DROP TABLE IF EXISTS courses;
-DROP TABLE IF EXISTS professors;
-DROP TABLE IF EXISTS students;
+DROP TABLE IF EXISTS saved_books      CASCADE;
+DROP TABLE IF EXISTS session_subjects CASCADE;
+DROP TABLE IF EXISTS sessions         CASCADE;
+DROP TABLE IF EXISTS search_events    CASCADE;
+DROP TABLE IF EXISTS book_views       CASCADE;
+DROP TABLE IF EXISTS book_subjects    CASCADE;
+DROP TABLE IF EXISTS subjects         CASCADE;
+DROP TABLE IF EXISTS books            CASCADE;
+DROP TABLE IF EXISTS students         CASCADE;
 
 -- ─────────────────────────────────────────
--- STUDENTS
+-- STUDENTS  (career affiliation → Diego's question)
 -- ─────────────────────────────────────────
 CREATE TABLE students (
-    student_id   SERIAL PRIMARY KEY,
-    control_num  VARCHAR(10)  UNIQUE NOT NULL,  -- e.g. 2309067
-    first_name   VARCHAR(80)  NOT NULL,
-    last_name    VARCHAR(80)  NOT NULL,
-    email        VARCHAR(120) UNIQUE NOT NULL,
-    phone        VARCHAR(20),
-    birth_date   DATE,
-    major        VARCHAR(100),
-    semester     SMALLINT     CHECK (semester BETWEEN 1 AND 12),
-    gpa          NUMERIC(4,2) DEFAULT 0.00,
-    is_active    BOOLEAN      DEFAULT TRUE,
-    created_at   TIMESTAMP    DEFAULT NOW()
+    student_id  SERIAL PRIMARY KEY,
+    control_num VARCHAR(10) UNIQUE NOT NULL,
+    full_name   VARCHAR(120) NOT NULL,
+    email       VARCHAR(120) UNIQUE NOT NULL,
+    career      VARCHAR(60)  NOT NULL,   -- one of the four career programs
+    semester    SMALLINT     CHECK (semester BETWEEN 1 AND 12),
+    created_at  TIMESTAMP    DEFAULT NOW()
 );
 
 -- ─────────────────────────────────────────
--- PROFESSORS
+-- SUBJECTS  (subject areas / tags)
 -- ─────────────────────────────────────────
-CREATE TABLE professors (
-    professor_id SERIAL PRIMARY KEY,
-    employee_id  VARCHAR(10)  UNIQUE NOT NULL,
-    first_name   VARCHAR(80)  NOT NULL,
-    last_name    VARCHAR(80)  NOT NULL,
-    email        VARCHAR(120) UNIQUE NOT NULL,
-    department   VARCHAR(100),
-    is_active    BOOLEAN      DEFAULT TRUE,
-    created_at   TIMESTAMP    DEFAULT NOW()
+CREATE TABLE subjects (
+    subject_id SERIAL PRIMARY KEY,
+    name       VARCHAR(80) UNIQUE NOT NULL
 );
 
 -- ─────────────────────────────────────────
--- COURSES
+-- BOOKS
 -- ─────────────────────────────────────────
-CREATE TABLE courses (
-    course_id    SERIAL PRIMARY KEY,
-    course_code  VARCHAR(20)  UNIQUE NOT NULL,  -- e.g. CS301
-    title        VARCHAR(150) NOT NULL,
-    description  TEXT,
-    credits      SMALLINT     NOT NULL CHECK (credits BETWEEN 1 AND 10),
-    semester     VARCHAR(20)  NOT NULL,          -- e.g. 2025-A
-    schedule     VARCHAR(100),                   -- e.g. Mon/Wed 10:00-11:30
-    classroom    VARCHAR(30),
-    max_capacity SMALLINT     DEFAULT 30,
-    professor_id INT          REFERENCES professors(professor_id) ON DELETE SET NULL,
-    is_active    BOOLEAN      DEFAULT TRUE,
-    created_at   TIMESTAMP    DEFAULT NOW()
+CREATE TABLE books (
+    book_id     SERIAL PRIMARY KEY,
+    title       VARCHAR(200) NOT NULL,
+    author      VARCHAR(120),
+    year        SMALLINT,
+    description TEXT,
+    created_at  TIMESTAMP DEFAULT NOW()
 );
 
 -- ─────────────────────────────────────────
--- ENROLLMENTS
+-- BOOK ↔ SUBJECT (many-to-many → Rous's question)
 -- ─────────────────────────────────────────
-CREATE TABLE enrollments (
-    enrollment_id SERIAL PRIMARY KEY,
-    student_id    INT  NOT NULL REFERENCES students(student_id)  ON DELETE CASCADE,
-    course_id     INT  NOT NULL REFERENCES courses(course_id)    ON DELETE CASCADE,
-    enrolled_at   TIMESTAMP DEFAULT NOW(),
-    status        VARCHAR(20) DEFAULT 'active'
-                  CHECK (status IN ('active', 'dropped', 'completed')),
-    UNIQUE (student_id, course_id)
+CREATE TABLE book_subjects (
+    book_id    INT NOT NULL REFERENCES books(book_id)       ON DELETE CASCADE,
+    subject_id INT NOT NULL REFERENCES subjects(subject_id) ON DELETE CASCADE,
+    PRIMARY KEY (book_id, subject_id)
 );
 
 -- ─────────────────────────────────────────
--- GRADES
+-- BOOK VIEWS  (detail-page views → Diego & Rous)
 -- ─────────────────────────────────────────
-CREATE TABLE grades (
-    grade_id      SERIAL PRIMARY KEY,
-    enrollment_id INT          NOT NULL REFERENCES enrollments(enrollment_id) ON DELETE CASCADE,
-    partial       SMALLINT     NOT NULL CHECK (partial BETWEEN 1 AND 3),
-    score         NUMERIC(5,2) CHECK (score BETWEEN 0 AND 100),
-    letter_grade  CHAR(2),
-    submitted_at  TIMESTAMP    DEFAULT NOW(),
-    UNIQUE (enrollment_id, partial)
+CREATE TABLE book_views (
+    view_id    SERIAL PRIMARY KEY,
+    book_id    INT NOT NULL REFERENCES books(book_id)       ON DELETE CASCADE,
+    student_id INT NOT NULL REFERENCES students(student_id) ON DELETE CASCADE,
+    career     VARCHAR(60) NOT NULL,    -- denormalized for fast career analysis
+    viewed_at  TIMESTAMP   NOT NULL
 );
 
 -- ─────────────────────────────────────────
--- ATTENDANCE
+-- SEARCH EVENTS  (filter usage + click → Arturo)
 -- ─────────────────────────────────────────
-CREATE TABLE attendance (
-    attendance_id SERIAL PRIMARY KEY,
-    enrollment_id INT      NOT NULL REFERENCES enrollments(enrollment_id) ON DELETE CASCADE,
-    session_date  DATE     NOT NULL,
-    status        VARCHAR(10) DEFAULT 'present'
-                  CHECK (status IN ('present', 'absent', 'late', 'excused')),
-    notes         TEXT,
-    UNIQUE (enrollment_id, session_date)
+CREATE TABLE search_events (
+    event_id    SERIAL PRIMARY KEY,
+    student_id  INT NOT NULL REFERENCES students(student_id) ON DELETE CASCADE,
+    query       VARCHAR(200),
+    filter_used BOOLEAN NOT NULL DEFAULT FALSE,
+    clicked     BOOLEAN NOT NULL DEFAULT FALSE,
+    searched_at TIMESTAMP NOT NULL
 );
 
 -- ─────────────────────────────────────────
--- INDEXES for performance
+-- SESSIONS  (duration + browsing depth → Mau & Rodri)
 -- ─────────────────────────────────────────
-CREATE INDEX idx_students_control    ON students(control_num);
-CREATE INDEX idx_courses_code        ON courses(course_code);
-CREATE INDEX idx_enrollments_student ON enrollments(student_id);
-CREATE INDEX idx_enrollments_course  ON enrollments(course_id);
-CREATE INDEX idx_grades_enrollment   ON grades(enrollment_id);
-CREATE INDEX idx_attendance_date     ON attendance(session_date);
+CREATE TABLE sessions (
+    session_id       SERIAL PRIMARY KEY,
+    student_id       INT NOT NULL REFERENCES students(student_id) ON DELETE CASCADE,
+    started_at       TIMESTAMP NOT NULL,
+    ended_at         TIMESTAMP NOT NULL,
+    duration_minutes NUMERIC(6,2) NOT NULL,
+    books_browsed    SMALLINT NOT NULL DEFAULT 0,   -- browsing depth → Rodri
+    saved_final      BOOLEAN  NOT NULL DEFAULT FALSE -- did they save at the end? → Rodri
+);
+
+-- ─────────────────────────────────────────
+-- SESSION ↔ SUBJECT  (distinct subjects per session → Mau)
+-- ─────────────────────────────────────────
+CREATE TABLE session_subjects (
+    session_id INT NOT NULL REFERENCES sessions(session_id) ON DELETE CASCADE,
+    subject_id INT NOT NULL REFERENCES subjects(subject_id) ON DELETE CASCADE,
+    PRIMARY KEY (session_id, subject_id)
+);
+
+-- ─────────────────────────────────────────
+-- SAVED BOOKS  (→ Rodri)
+-- ─────────────────────────────────────────
+CREATE TABLE saved_books (
+    save_id                SERIAL PRIMARY KEY,
+    student_id             INT NOT NULL REFERENCES students(student_id) ON DELETE CASCADE,
+    book_id                INT NOT NULL REFERENCES books(book_id)       ON DELETE CASCADE,
+    browsing_depth_at_save SMALLINT NOT NULL,
+    saved_at               TIMESTAMP NOT NULL,
+    UNIQUE (student_id, book_id)
+);
+
+-- ─────────────────────────────────────────
+-- INDEXES
+-- ─────────────────────────────────────────
+CREATE INDEX idx_views_book      ON book_views(book_id);
+CREATE INDEX idx_views_career    ON book_views(career);
+CREATE INDEX idx_booksub_book    ON book_subjects(book_id);
+CREATE INDEX idx_booksub_subject ON book_subjects(subject_id);
+CREATE INDEX idx_search_filter   ON search_events(filter_used);
+CREATE INDEX idx_sessions_student ON sessions(student_id);
+CREATE INDEX idx_saved_student   ON saved_books(student_id);
