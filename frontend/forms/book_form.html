@@ -2,34 +2,159 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Book Detail — TeamX Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Books — TeamX Library</title>
   <link rel="stylesheet" href="../static/style.css" />
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <h1>📚 TeamX Digital Library</h1>
-      <nav>
-        <a href="../index.html">Home</a>
-        <a href="search_form.html">Search</a>
-        <a href="book_form.html">Books</a>
-        <a href="saved_form.html">Saved</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <!--
-      TODO (Arturo): Implement book detail page with:
-      - Book title, author, description, subject tags
-      - "Save" button → calls /api/saves (logs browsing_depth at save moment)
-      - View is auto-logged to book_views on page load → /api/books/:id
-      Research questions supported:
-      [Rous]  multi-tag vs single-tag view counts
-      [Diego] views per subject by career
-      [Rodri] browsing depth at moment of save
-    -->
-    <p>Book detail — coming soon</p>
-  </main>
+<header>
+  <div class="header-inner">
+    <span class="logo">TeamX Library</span>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="search_form.html">Search</a>
+      <a href="book_form.html" class="active">Books</a>
+      <a href="saved_form.html">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page">
+  <div class="toolbar">
+    <h1>Browse books</h1>
+    <div class="select-wrap">
+      <select id="subject" onchange="loadBooks()">
+        <option value="">All subjects</option>
+        <option>Mathematics</option>
+        <option>Programming</option>
+        <option>Databases</option>
+        <option>Statistics</option>
+        <option>Electronics</option>
+        <option>Biology</option>
+        <option>Machine Learning</option>
+        <option>Ethics</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="grid" class="grid"></div>
+</div>
+
+<div id="overlay" class="detail-overlay" onclick="closeDetail(event)">
+  <div class="detail-panel">
+    <button class="close-btn" onclick="closeOverlay()" aria-label="Close">x</button>
+    <div id="d-cover" class="detail-cover"></div>
+    <h2 id="d-title"></h2>
+    <p class="detail-meta" id="d-author"></p>
+    <p class="detail-meta" id="d-year"></p>
+    <div class="clearfix"></div>
+    <span id="d-tag" class="subject-tag"></span>
+    <p class="desc" id="d-desc"></p>
+    <div class="sid-row">
+      <label for="student-id">Student ID</label>
+      <input type="number" id="student-id" value="1" min="1" max="200" />
+    </div>
+    <button class="save-btn" onclick="saveBook()">Save book</button>
+    <div id="toast" class="toast"></div>
+  </div>
+</div>
+
+<footer>TeamX &middot; Cesar Arturo Balam Euan (2309017)</footer>
+
+<script>
+  const API = "http://localhost:5000/api";
+  let currentBook = null;
+  let browsingDepth = 0;
+
+  const CLS = {
+    "Mathematics":"cover-math","Programming":"cover-prog","Databases":"cover-db",
+    "Statistics":"cover-stats","Electronics":"cover-elec","Biology":"cover-bio",
+    "Machine Learning":"cover-ml","Ethics":"cover-ethics"
+  };
+  const ABBR = {
+    "Mathematics":"MATH","Programming":"PROG","Databases":"DB","Statistics":"STAT",
+    "Electronics":"ELEC","Biology":"BIO","Machine Learning":"ML","Ethics":"ETH"
+  };
+
+  function loadBooks() {
+    const subject = document.getElementById("subject").value;
+    const url = subject ? `${API}/books/?subject=${encodeURIComponent(subject)}` : `${API}/books/`;
+    fetch(url)
+      .then(r => r.json())
+      .then(renderGrid)
+      .catch(() => {
+        document.getElementById("grid").innerHTML =
+          '<p class="empty">Could not reach the API. Make sure the Flask server is running.</p>';
+      });
+  }
+
+  function renderGrid(books) {
+    const grid = document.getElementById("grid");
+    if (!books.length) { grid.innerHTML = '<p class="empty">No books found for this subject.</p>'; return; }
+    const subject = document.getElementById("subject").value;
+    const cls  = CLS[subject] || "cover-default";
+    const abbr = ABBR[subject] || "BOOK";
+    grid.innerHTML = books.map(b => `
+      <div class="book-card" onclick="openBook(${b.book_id})">
+        <div class="book-cover ${cls}">${abbr}</div>
+        <div class="book-title">${b.title}</div>
+        <div class="book-author">${b.author || "Unknown author"}</div>
+        <div class="book-year">${b.year || ""}</div>
+      </div>`).join("");
+  }
+
+  function openBook(id) {
+    browsingDepth++;
+    fetch(`${API}/books/${id}`)
+      .then(r => r.json())
+      .then(b => {
+        currentBook = b;
+        const subject = document.getElementById("subject").value;
+        const cls  = CLS[subject] || "cover-default";
+        const abbr = ABBR[subject] || "BOOK";
+        document.getElementById("d-cover").className = `detail-cover ${cls}`;
+        document.getElementById("d-cover").textContent = abbr;
+        document.getElementById("d-title").textContent  = b.title;
+        document.getElementById("d-author").textContent = b.author ? "By " + b.author : "";
+        document.getElementById("d-year").textContent   = b.year ? "Published " + b.year : "";
+        document.getElementById("d-tag").textContent    = subject || "Academic";
+        document.getElementById("d-desc").textContent   = b.description || "";
+        const toast = document.getElementById("toast");
+        toast.className = "toast"; toast.textContent = "";
+        const btn = document.querySelector(".save-btn");
+        btn.disabled = false; btn.textContent = "Save book";
+
+        const sid = document.getElementById("student-id").value || 1;
+        fetch(`${API}/books/${id}?student_id=${sid}`).catch(() => {});
+        document.getElementById("overlay").classList.add("open");
+      })
+      .catch(() => alert("Could not load book details."));
+  }
+
+  function closeOverlay() { document.getElementById("overlay").classList.remove("open"); currentBook = null; }
+  function closeDetail(e) { if (e.target === document.getElementById("overlay")) closeOverlay(); }
+
+  function saveBook() {
+    if (!currentBook) return;
+    const studentId = parseInt(document.getElementById("student-id").value);
+    const btn = document.querySelector(".save-btn");
+    const toast = document.getElementById("toast");
+    if (!studentId || studentId < 1 || studentId > 200) {
+      toast.className = "toast error"; toast.textContent = "Enter a valid student ID (1-200)."; return;
+    }
+    btn.disabled = true; btn.textContent = "Saving...";
+    fetch(`${API}/saves/`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ student_id: studentId, book_id: currentBook.book_id, browsing_depth_at_save: browsingDepth }),
+    })
+      .then(r => r.json())
+      .then(d => { toast.className = "toast success"; toast.textContent = "Book saved to your list."; btn.textContent = "Saved"; })
+      .catch(() => { toast.className = "toast error"; toast.textContent = "Could not reach the API."; btn.disabled = false; btn.textContent = "Save book"; });
+  }
+
+  loadBooks();
+</script>
 </body>
 </html>

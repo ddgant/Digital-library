@@ -2,34 +2,133 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Search — TeamX Library</title>
   <link rel="stylesheet" href="../static/style.css" />
+  <style>
+    .list-row.clicked { border-color: #16a34a; background: #f0fdf4; }
+    .clicked-tag {
+      font-size: .72rem; font-weight: 600; color: #166534;
+      background: #dcfce7; padding: .15rem .55rem; border-radius: 20px;
+      white-space: nowrap;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <h1>📚 TeamX Digital Library</h1>
-      <nav>
-        <a href="../index.html">Home</a>
-        <a href="search_form.html">Search</a>
-        <a href="book_form.html">Books</a>
-        <a href="saved_form.html">Saved</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <!--
-      TODO (Arturo): Implement search form with:
-      - Text input for keyword search
-      - Subject filter dropdown (optional toggle)
-      - Track whether filter was used before searching
-        → logs filter_used=true/false to /api/search
-      - On result click → call /api/search/click to register conversion
-      Research question: Do students who apply a filter have a higher
-      search-to-click conversion rate?
-    -->
-    <p>Search form — coming soon</p>
-  </main>
+<header>
+  <div class="header-inner">
+    <span class="logo">TeamX Library</span>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="search_form.html" class="active">Search</a>
+      <a href="book_form.html">Books</a>
+      <a href="saved_form.html">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page">
+  <div class="toolbar"><h1>Search books</h1></div>
+
+  <div class="searchbar">
+    <input type="text" id="query" placeholder="Search by title, e.g. Clean Code"
+           onkeydown="if(event.key==='Enter') runSearch()" />
+    <button class="btn" onclick="runSearch()">Search</button>
+  </div>
+
+  <div style="display:flex; gap:.6rem; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap;">
+    <span style="font-size:.82rem; color:var(--text-soft); font-weight:500;">Filter by subject:</span>
+    <div class="select-wrap">
+      <select id="subject">
+        <option value="">No filter</option>
+        <option>Mathematics</option>
+        <option>Programming</option>
+        <option>Databases</option>
+        <option>Statistics</option>
+        <option>Electronics</option>
+        <option>Biology</option>
+        <option>Machine Learning</option>
+        <option>Ethics</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="results" class="list"></div>
+  <div id="empty" class="empty">Type a title and press search to begin.</div>
+</div>
+
+<footer>TeamX &middot; Cesar Arturo Balam Euan (2309017)</footer>
+
+<script>
+  const API = "http://localhost:5000/api";
+  const STUDENT_ID = 1;
+  let lastEventId = null;
+
+  const ABBR = {
+    "Mathematics":"MATH","Programming":"PROG","Databases":"DB","Statistics":"STAT",
+    "Electronics":"ELEC","Biology":"BIO","Machine Learning":"ML","Ethics":"ETH"
+  };
+  const CLS = {
+    "Mathematics":"cover-math","Programming":"cover-prog","Databases":"cover-db",
+    "Statistics":"cover-stats","Electronics":"cover-elec","Biology":"cover-bio",
+    "Machine Learning":"cover-ml","Ethics":"cover-ethics"
+  };
+
+  function runSearch() {
+    const q = document.getElementById("query").value.trim();
+    const subject = document.getElementById("subject").value;
+    const filterUsed = subject !== "";
+
+    const url = `${API}/search/?q=${encodeURIComponent(q)}`
+              + `&filter_used=${filterUsed}&student_id=${STUDENT_ID}`;
+
+    fetch(url)
+      .then(r => r.json())
+      .then(d => { lastEventId = d.event_id; renderResults(d.results || [], subject); })
+      .catch(() => {
+        document.getElementById("empty").textContent =
+          "Could not reach the API. Make sure the Flask server is running.";
+        document.getElementById("empty").style.display = "block";
+      });
+  }
+
+  function renderResults(results, subject) {
+    const box = document.getElementById("results");
+    const empty = document.getElementById("empty");
+    if (!results.length) {
+      box.innerHTML = "";
+      empty.textContent = "No books matched your search.";
+      empty.style.display = "block";
+      return;
+    }
+    empty.style.display = "none";
+    const cls  = CLS[subject] || "cover-default";
+    const abbr = ABBR[subject] || "BOOK";
+    box.innerHTML = results.map(b => `
+      <div class="list-row" onclick="registerClick(this)">
+        <div class="list-badge ${cls}">${abbr}</div>
+        <div class="list-info">
+          <h4>${b.title}</h4>
+          <p>${b.author || "Unknown author"}</p>
+        </div>
+        <div class="list-meta" data-meta>${b.year || ""}</div>
+      </div>`).join("");
+  }
+
+  function registerClick(row) {
+    if (row.classList.contains("clicked")) return;  // count once
+    row.classList.add("clicked");
+    const meta = row.querySelector("[data-meta]");
+    if (meta) meta.innerHTML = '<span class="clicked-tag">Selected</span>';
+
+    if (!lastEventId) return;
+    fetch(`${API}/search/click`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ event_id: lastEventId }),
+    }).catch(() => {});
+  }
+</script>
 </body>
 </html>

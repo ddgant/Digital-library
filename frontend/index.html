@@ -8,26 +8,62 @@
 </head>
 <body>
 
-  <header>
-    <div class="header-inner">
-      <h1>📚 TeamX Digital Library</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="forms/search_form.html">Search</a>
-        <a href="forms/book_form.html">Books</a>
-        <a href="forms/saved_form.html">Saved</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="header-inner">
+    <span class="logo">TeamX Library</span>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="forms/search_form.html">Search</a>
+      <a href="forms/book_form.html">Books</a>
+      <a href="forms/saved_form.html">Saved</a>
+    </nav>
+  </div>
+</header>
 
-  <main class="container">
-    <!-- TODO (Arturo): Build dashboard with book catalog, subject filters, and search bar -->
-    <p>Dashboard — coming soon</p>
-  </main>
+<div class="page">
+  <section class="hero">
+    <h1>Academic Digital Library</h1>
+    <p>Search, browse, and save academic books across mathematics, programming, biology, ethics, and more.</p>
+  </section>
 
-  <footer>
-    <p>TeamX · 2025</p>
-  </footer>
+  <div class="cards">
+    <a class="feature-card" href="forms/search_form.html">
+      <div class="feature-icon">S</div>
+      <h3>Search</h3>
+      <p>Find books by title with optional subject filters to narrow your results.</p>
+    </a>
+    <a class="feature-card" href="forms/book_form.html">
+      <div class="feature-icon">B</div>
+      <h3>Browse books</h3>
+      <p>Explore the full catalog by subject and open any book for details.</p>
+    </a>
+    <a class="feature-card" href="forms/saved_form.html">
+      <div class="feature-icon">L</div>
+      <h3>Saved list</h3>
+      <p>Review the books you saved for later reading, per student account.</p>
+    </a>
+  </div>
 
+  <div style="text-align:center; margin-top:3rem;">
+    <div id="api-status" class="status-badge loading">Checking API status...</div>
+  </div>
+</div>
+
+<footer>TeamX &middot; 2025 &middot; Digital Library Platform</footer>
+
+<script>
+  fetch("http://localhost:5000/api/health")
+    .then(r => r.json())
+    .then(d => {
+      const el = document.getElementById("api-status");
+      el.textContent = "API online — " + d.platform;
+      el.className = "status-badge online";
+    })
+    .catch(() => {
+      const el = document.getElementById("api-status");
+      el.textContent = "API offline — start the Flask server";
+      el.className = "status-badge offline";
+    });
+</script>
 </body>
 </html>

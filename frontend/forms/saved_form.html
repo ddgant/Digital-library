@@ -2,31 +2,77 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Saved Books — TeamX Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saved — TeamX Library</title>
   <link rel="stylesheet" href="../static/style.css" />
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <h1>📚 TeamX Digital Library</h1>
-      <nav>
-        <a href="../index.html">Home</a>
-        <a href="search_form.html">Search</a>
-        <a href="book_form.html">Books</a>
-        <a href="saved_form.html">Saved</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <!--
-      TODO (Arturo): Implement saved books list for logged-in student
-      - List all books saved by the student
-      - Show browsing_depth recorded at save time
-      Research question supported:
-      [Rodri] Do students who browse more have a higher save probability?
-    -->
-    <p>Saved books — coming soon</p>
-  </main>
+<header>
+  <div class="header-inner">
+    <span class="logo">TeamX Library</span>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="search_form.html">Search</a>
+      <a href="book_form.html">Books</a>
+      <a href="saved_form.html" class="active">Saved</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page">
+  <div class="toolbar">
+    <h1>Saved books</h1>
+    <div class="searchbar" style="margin-bottom:0; max-width:280px;">
+      <input type="number" id="student" value="1" min="1" max="200" placeholder="Student ID"
+             onkeydown="if(event.key==='Enter') loadSaved()" />
+      <button class="btn" onclick="loadSaved()">Load</button>
+    </div>
+  </div>
+
+  <div id="results" class="list"></div>
+  <div id="empty" class="empty">Enter a student ID to see their saved books.</div>
+</div>
+
+<footer>TeamX &middot; Cesar Arturo Balam Euan (2309017)</footer>
+
+<script>
+  const API = "http://localhost:5000/api";
+
+  function loadSaved() {
+    const sid = document.getElementById("student").value;
+    fetch(`${API}/saves/?student_id=${sid}`)
+      .then(r => r.json())
+      .then(renderSaved)
+      .catch(() => {
+        document.getElementById("empty").textContent =
+          "Could not reach the API. Make sure the Flask server is running.";
+        document.getElementById("empty").style.display = "block";
+      });
+  }
+
+  function renderSaved(saves) {
+    const box = document.getElementById("results");
+    const empty = document.getElementById("empty");
+    if (!saves.length) {
+      box.innerHTML = "";
+      empty.textContent = "No saved books for this student yet.";
+      empty.style.display = "block";
+      return;
+    }
+    empty.style.display = "none";
+    box.innerHTML = saves.map(s => `
+      <div class="list-row">
+        <div class="list-badge cover-default">SAVE</div>
+        <div class="list-info">
+          <h4>${s.title}</h4>
+          <p>Saved after browsing ${s.browsing_depth_at_save} book(s)</p>
+        </div>
+        <div class="list-meta">Book #${s.book_id}</div>
+      </div>`).join("");
+  }
+
+  loadSaved();
+</script>
 </body>
 </html>
