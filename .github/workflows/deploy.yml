@@ -1,0 +1,81 @@
+name: TeamX Library CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: Build & Verify Skeleton
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:14
+        env:
+          POSTGRES_DB: teamx_library
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r api/requirements.txt
+
+      - name: Verify required files
+        run: |
+          for f in \
+            database/schema.sql \
+            api/app.py api/requirements.txt \
+            api/routes/books.py api/routes/search.py api/routes/sessions.py \
+            api/routes/saves.py api/routes/subjects.py \
+            frontend/index.html \
+            scripts/generate_data.py scripts/load_data.py \
+            data/csv/book_views.csv data/json/students.json \
+            data/excel/library_analytics.xlsx \
+            README.md; do
+            if [ -f "$f" ]; then echo "✅ $f"; else echo "❌ MISSING: $f"; exit 1; fi
+          done
+
+      - name: Apply schema
+        env:
+          PGPASSWORD: postgres
+        run: |
+          psql -h localhost -U postgres -d teamx_library -f database/schema.sql
+
+      - name: Regenerate sample data
+        run: python scripts/generate_data.py
+
+      - name: Load data into database
+        env:
+          DB_HOST: localhost
+          DB_PORT: 5432
+          DB_NAME: teamx_library
+          DB_USER: postgres
+          DB_PASSWORD: postgres
+        run: python scripts/load_data.py
+
+      - name: API import smoke test
+        run: |
+          cd api
+          python -c "from app import app; c = app.test_client(); print('Health:', c.get('/api/health').status_code)"
+
+      - name: Done
+        run: echo "✅ TeamX Digital Library skeleton verified and ready."
