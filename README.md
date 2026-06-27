@@ -2,7 +2,7 @@
 
 # TeamX — Digital Library Platform
 
-### A digital library platform where students can search, browse, and save academic books — built to support behavioral data research.
+### A digital library platform where students can search, browse, and save academic books — instrumented to support five behavioral research questions.
 
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-API-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
@@ -30,6 +30,7 @@
 - [How to Run Locally](#how-to-run-locally)
 - [Database Schema Overview](#database-schema-overview)
 - [API Endpoints](#api-endpoints)
+- [Sample Data](#sample-data)
 - [Team Members & Roles](#team-members--roles)
 - [Tech Stack](#tech-stack)
 - [License](#license)
@@ -40,17 +41,17 @@
 
 ```
 digital-library/
-├── database/                  # Schema SQL + seed data (Mauricio)
+├── database/                  # Schema SQL (Mauricio)
 │   └── schema.sql
-├── api/                       # REST API skeleton (Rodrigo)
+├── api/                       # REST API with Flask (Rodrigo)
 │   ├── app.py
 │   ├── requirements.txt
 │   ├── routes/
-│   │   ├── books.py           # Book catalog endpoints
+│   │   ├── books.py           # Catalog + view logging
 │   │   ├── search.py          # Search + click tracking
-│   │   ├── sessions.py        # Session & browsing depth
+│   │   ├── sessions.py        # Sessions, browsing depth, subjects
 │   │   ├── saves.py           # Saved books
-│   │   └── subjects.py        # Subject traffic stats
+│   │   └── subjects.py        # Subject traffic by career
 │   ├── middleware/
 │   │   └── auth.py
 │   └── controllers/
@@ -58,35 +59,38 @@ digital-library/
 ├── frontend/                  # HTML forms and UI (Arturo)
 │   ├── index.html
 │   ├── forms/
-│   │   ├── search_form.html   # Search with filter toggle
-│   │   ├── book_form.html     # Book detail + save button
-│   │   └── saved_form.html    # Student's saved books
+│   │   ├── search_form.html
+│   │   ├── book_form.html
+│   │   └── saved_form.html
 │   └── static/
 │       └── style.css
-├── data/                      # Sample datasets (Rous)
-│   ├── csv/
-│   ├── json/
+├── data/                      # Generated sample data (Rous)
+│   ├── csv/                   # 9 CSV files
+│   ├── json/                  # 4 JSON files
 │   └── excel/
-├── scripts/                   # Data generation scripts (Rous)
+│       └── library_analytics.xlsx
+├── scripts/                   # Data generation & loaders (Rous)
 │   ├── generate_data.py
+│   ├── fetch_real_books.py    # Loads 80 real books (Open Library)
 │   └── load_data.py
-├── .github/
-│   └── workflows/
-│       └── deploy.yml         # GitHub Actions CI/CD
-└── README.md
+├── .github/workflows/
+│   └── deploy.yml             # GitHub Actions CI/CD
+└── README.md                  # Documentation (Diego)
 ```
 
 ---
 
 ## Research Questions
 
-| Member | Question | Statistical Indicator |
-|--------|----------|-----------------------|
-| **Arturo** | Do students who apply a subject filter before searching have a higher search-to-click conversion rate? | Conversion rate as a proportion, compared between both groups |
-| **Diego** | Is there a subject area that receives consistent traffic from students across all four career programs? | Proportion of views per subject broken down by career affiliation |
-| **Rous** | Do books tagged with more than one subject receive more detail page views on average? | Mean view count compared between single-tagged and multi-tagged books |
-| **Rodrigo** | Do students who browse more books before choosing one have a higher probability of saving? | Correlation between browsing depth and save probability |
-| **Mauricio** | Is there a relationship between total session duration and the number of distinct subjects visited? | Pearson correlation between session duration and subject count |
+The platform is instrumented so each member can extract data for their question:
+
+| Member | Research Question | Statistical Indicator | Data Source |
+|--------|-------------------|-----------------------|-------------|
+| **Arturo** | Do students who apply a subject filter before searching have a higher search-to-click conversion rate? | Conversion rate as a proportion between both groups | `search_events` |
+| **Diego** | Is there a subject area that receives consistent traffic across all four career programs? | Proportion of views per subject by career (evenness ratio) | `book_views`, `book_subjects` |
+| **Rous** | Do books tagged with more than one subject receive more detail page views on average? | Mean view count: single-tagged vs. multi-tagged | `books`, `book_subjects`, `book_views` |
+| **Rodrigo** | Do students who browse more books before choosing have a higher probability of saving? | Correlation between browsing depth and save probability | `sessions`, `saved_books` |
+| **Mauricio** | Is there a relationship between session duration and number of distinct subjects visited? | Pearson correlation between duration and subject count | `sessions`, `session_subjects` |
 
 ---
 
@@ -102,59 +106,58 @@ git clone https://github.com/ddgant/digital-library.git
 cd digital-library
 ```
 
-### 2. Set up the database
+### 2. Install dependencies
+```bash
+pip install -r api/requirements.txt
+```
+
+### 3. Configure environment variables
+```bash
+cp .env.example .env
+# Edit .env with your PostgreSQL credentials
+```
+
+### 4. Create the database and apply the schema
 ```bash
 psql -U postgres -c "CREATE DATABASE teamx_library;"
 psql -U postgres -d teamx_library -f database/schema.sql
 ```
 
-### 3. Install API dependencies
+### 5. Generate and load the sample data
 ```bash
-cd api
-pip install -r requirements.txt
+python scripts/generate_data.py     # writes CSV / JSON / Excel into data/
+python scripts/fetch_real_books.py  # replaces books with 80 real titles
+python scripts/load_data.py         # loads the CSVs into PostgreSQL
 ```
 
-### 4. Configure environment variables
-```bash
-cp .env.example .env
-# Edit .env with your DB credentials
-```
-
-### 5. Run the API server
+### 6. Run the API server
 ```bash
 cd api
 python app.py
 ```
-> API will be available at `http://localhost:5000`
+> API available at `http://localhost:5000` — test with `GET /api/health`
 
-### 6. Open the frontend
+### 7. Open the frontend
 ```bash
-open frontend/index.html
-# Or serve it:
 python -m http.server 8080 --directory frontend
-```
-
-### 7. Generate and load sample data
-```bash
-cd scripts
-python generate_data.py   # Creates CSV/JSON/Excel files
-python load_data.py       # Loads data into the database
+# then open http://localhost:8080
 ```
 
 ---
 
 ## Database Schema Overview
 
-| Table              | Description                                               |
-|--------------------|-----------------------------------------------------------|
-| `students`         | Student profiles, career affiliation, and semester        |
-| `books`            | Book catalog with title, author, and description          |
-| `book_subjects`    | Many-to-many relation between books and subject tags      |
-| `book_views`       | Detail page view events per student                       |
-| `search_events`    | Search queries with filter usage and click tracking       |
-| `sessions`         | Student sessions with duration and browsing depth         |
-| `session_subjects` | Subjects visited within each session                      |
-| `saved_books`      | Books saved by students, with browsing depth at save time |
+| Table | Description |
+|-------|-------------|
+| `students` | Student profiles with **career affiliation** and semester |
+| `books` | Book catalog (title, author, year, description) |
+| `subjects` | Subject areas / tags |
+| `book_subjects` | Many-to-many book ↔ subject relationship |
+| `book_views` | Detail-page view events (with career) |
+| `search_events` | Search queries with `filter_used` and `clicked` flags |
+| `sessions` | Sessions with duration, browsing depth, final-save flag |
+| `session_subjects` | Distinct subjects visited per session |
+| `saved_books` | Saved books with browsing depth recorded at save time |
 
 ---
 
@@ -162,19 +165,42 @@ python load_data.py       # Loads data into the database
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| 🟢 `GET`  | `/api/books` | List all books |
+| 🟢 `GET`  | `/api/health` | Health check |
+| 🟢 `GET`  | `/api/books` | List books (optional `?subject=`) |
+| 🟢 `GET`  | `/api/books/<id>` | Get book detail + log a view |
 | 🟡 `POST` | `/api/books` | Add a new book |
-| 🟢 `GET`  | `/api/books/<id>` | Get book detail + log view |
-| 🟢 `GET`  | `/api/search` | Search books (logs filter usage) |
-| 🟡 `POST` | `/api/search/click` | Register a search result click |
+| 🟢 `GET`  | `/api/search?q=&filter_used=` | Search books, logs filter usage |
+| 🟡 `POST` | `/api/search/click` | Register a result click (conversion) |
 | 🟡 `POST` | `/api/sessions` | Start a session |
-| 🔵 `PUT`  | `/api/sessions/<id>/end` | End a session |
-| 🟡 `POST` | `/api/sessions/<id>/subjects` | Log a subject visit |
+| 🔵 `PUT`  | `/api/sessions/<id>/end` | End a session (computes duration) |
+| 🟡 `POST` | `/api/sessions/<id>/subjects` | Log a subject visited |
 | 🟡 `POST` | `/api/sessions/<id>/browse` | Increment browsing depth |
-| 🟢 `GET`  | `/api/saves` | List saved books for a student |
+| 🟢 `GET`  | `/api/saves?student_id=` | List a student's saved books |
 | 🟡 `POST` | `/api/saves` | Save a book |
-| 🟢 `GET`  | `/api/subjects` | List subjects with traffic stats |
+| 🟢 `GET`  | `/api/subjects` | List all subjects |
 | 🟢 `GET`  | `/api/subjects/<id>/stats` | Subject views broken down by career |
+
+---
+
+## Sample Data
+
+Generated by `scripts/generate_data.py` (fixed seed → reproducible), with the
+book catalog replaced by 80 real titles via `scripts/fetch_real_books.py`:
+
+| Dataset | Rows | Formats |
+|---------|------|---------|
+| students | 200 | CSV, JSON |
+| books | 80 | CSV, JSON |
+| subjects | 8 | CSV, JSON |
+| book_subjects | 80 | CSV |
+| book_views | 5,000 | CSV, JSON |
+| search_events | 1,500 | CSV |
+| sessions | 800 | CSV |
+| session_subjects | ~2,800 | CSV |
+| saved_books | ~430 | CSV |
+
+The Excel workbook `data/excel/library_analytics.xlsx` contains three summary
+sheets (book tag summary, session stats, search conversion) for quick inspection.
 
 ---
 
@@ -186,9 +212,9 @@ python load_data.py       # Loads data into the database
 |------|----|------|--------------|
 | **Mauricio Gabriel Ramírez Rubio** | 2309192 | Database Design | `database/schema.sql` |
 | **Rodrigo García Martínez** | 2309091 | API Design | `api/` — Flask routes, controllers, middleware |
-| **Cesar Arturo Balam Euan** | 2309017 | Frontend & Form Design | `frontend/` — HTML forms and CSS styles |
-| **Roselyn G. Polanco González** | 2309184 | Data Generation & Instrumentation | `data/`, `scripts/` — sample datasets and loaders |
-| **Diego De Gante Pérez** | 2309067 | Documentation | `README.md`, inline code comments, API docs |
+| **Cesar Arturo Balam Euan** | 2309017 | Frontend & Form Design | `frontend/` — HTML forms and CSS |
+| **Roselyn G. Polanco González** | 2309184 | Data Generation & Instrumentation | `data/`, `scripts/` |
+| **Diego De Gante Pérez** | 2309067 | Documentation | `README.md`, API docs, inline comments |
 | **Dr. Jorge J. Pedrozo Romero** | — | Course Professor | Project supervision and guidance |
 
 </div>
