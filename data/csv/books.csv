@@ -1,0 +1,81 @@
+book_id,title,author,year,description
+1,Calculus,Michael Spivak,1967,Academic book on Mathematics.
+2,Introduction to Linear Algebra,Gilbert Strang,1993,Academic book on Mathematics.
+3,Discrete Mathematics and Its Applications,Kenneth H. Rosen,1988,Academic book on Mathematics.
+4,Principles of Mathematical Analysis,Walter Rudin,1953,Academic book on Mathematics.
+5,Abstract Algebra,David S. Dummit,1991,Academic book on Mathematics.
+6,Linear Algebra Done Right,Sheldon Axler,1995,Academic book on Mathematics.
+7,Topology,James R. Munkres,1975,Academic book on Mathematics.
+8,Numerical Analysis,Richard L. Burden,1978,Academic book on Mathematics.
+9,A First Course in Probability,Sheldon Ross,1976,Academic book on Mathematics.
+10,Mathematical Methods for Physics and Engineering,K. F. Riley,1997,Academic book on Mathematics.
+11,The C Programming Language,Brian W. Kernighan,1978,Academic book on Programming.
+12,Structure and Interpretation of Computer Programs,Harold Abelson,1984,Academic book on Programming.
+13,Clean Code,Robert C. Martin,2008,Academic book on Programming.
+14,The Pragmatic Programmer,Andrew Hunt,1999,Academic book on Programming.
+15,Introduction to Algorithms,Thomas H. Cormen,1990,Academic book on Programming.
+16,Design Patterns,Erich Gamma,1994,Academic book on Programming.
+17,Code Complete,Steve McConnell,1993,Academic book on Programming.
+18,Python Crash Course,Eric Matthes,2015,Academic book on Programming.
+19,Eloquent JavaScript,Marijn Haverbeke,2011,Academic book on Programming.
+20,Refactoring,Martin Fowler,1999,Academic book on Programming.
+21,Database System Concepts,Abraham Silberschatz,1991,Academic book on Databases.
+22,An Introduction to Database Systems,C. J. Date,1975,Academic book on Databases.
+23,Fundamentals of Database Systems,Ramez Elmasri,1989,Academic book on Databases.
+24,The Data Warehouse Toolkit,Ralph Kimball,1996,Academic book on Databases.
+25,SQL and Relational Theory,C. J. Date,2009,Academic book on Databases.
+26,NoSQL Distilled,Pramod J. Sadalage,2012,Academic book on Databases.
+27,Designing Data-Intensive Applications,Martin Kleppmann,2017,Academic book on Databases.
+28,PostgreSQL: Up and Running,Regina Obe,2012,Academic book on Databases.
+29,Learning SQL,Alan Beaulieu,2005,Academic book on Databases.
+30,High Performance MySQL,Baron Schwartz,2004,Academic book on Databases.
+31,The Art of Statistics,David Spiegelhalter,2019,Academic book on Statistics.
+32,Statistical Inference,George Casella,1990,Academic book on Statistics.
+33,An Introduction to Statistical Learning,Gareth James,2013,Academic book on Statistics.
+34,Bayesian Data Analysis,Andrew Gelman,1995,Academic book on Statistics.
+35,Naked Statistics,Charles Wheelan,2013,Academic book on Statistics.
+36,Statistics,David Freedman,1978,Academic book on Statistics.
+37,Practical Statistics for Data Scientists,Peter Bruce,2017,Academic book on Statistics.
+38,The Elements of Statistical Learning,Trevor Hastie,2001,Academic book on Statistics.
+39,Probability Theory: The Logic of Science,E. T. Jaynes,2003,Academic book on Statistics.
+40,Think Stats,Allen B. Downey,2011,Academic book on Statistics.
+41,The Art of Electronics,Paul Horowitz,1980,Academic book on Electronics.
+42,Electronic Devices and Circuit Theory,Robert L. Boylestad,1972,Academic book on Electronics.
+43,Microelectronic Circuits,Adel S. Sedra,1982,Academic book on Electronics.
+44,Fundamentals of Electric Circuits,Charles K. Alexander,2000,Academic book on Electronics.
+45,Digital Design,M. Morris Mano,1984,Academic book on Electronics.
+46,Electric Circuits,James W. Nilsson,1983,Academic book on Electronics.
+47,Signal Processing First,James H. McClellan,2003,Academic book on Electronics.
+48,Foundations of Analog and Digital Electronic Circuits,Agarwal & Lang,2005,Academic book on Electronics.
+49,CMOS VLSI Design,Neil H. E. Weste,1985,Academic book on Electronics.
+50,Introduction to Electrodynamics,David J. Griffiths,1981,Academic book on Electronics.
+51,Campbell Biology,Jane B. Reece,1987,Academic book on Biology.
+52,Molecular Biology of the Cell,Bruce Alberts,1983,Academic book on Biology.
+53,The Selfish Gene,Richard Dawkins,1976,Academic book on Biology.
+54,Genetics: Analysis and Principles,Robert J. Brooker,1999,Academic book on Biology.
+55,Biochemistry,Jeremy M. Berg,1975,Academic book on Biology.
+56,The Double Helix,James D. Watson,1968,Academic book on Biology.
+57,On the Origin of Species,Charles Darwin,1859,Academic book on Biology.
+58,Lehninger Principles of Biochemistry,David L. Nelson,1982,Academic book on Biology.
+59,Human Physiology,Dee Unglaub Silverthorn,1998,Academic book on Biology.
+60,Brock Biology of Microorganisms,Michael T. Madigan,1970,Academic book on Biology.
+61,Pattern Recognition and Machine Learning,Christopher M. Bishop,2006,Academic book on Machine Learning.
+62,Deep Learning,Ian Goodfellow,2016,Academic book on Machine Learning.
+63,Hands-On Machine Learning with Scikit-Learn,Aurélien Géron,2017,Academic book on Machine Learning.
+64,The Hundred-Page Machine Learning Book,Andriy Burkov,2019,Academic book on Machine Learning.
+65,Machine Learning: A Probabilistic Perspective,Kevin P. Murphy,2012,Academic book on Machine Learning.
+66,Reinforcement Learning,Richard S. Sutton,1998,Academic book on Machine Learning.
+67,Natural Language Processing with Python,Steven Bird,2009,Academic book on Machine Learning.
+68,Neural Networks and Deep Learning,Michael Nielsen,2015,Academic book on Machine Learning.
+69,Data Science from Scratch,Joel Grus,2015,Academic book on Machine Learning.
+70,Python Machine Learning,Sebastian Raschka,2015,Academic book on Machine Learning.
+71,Ethics: Inventing Right and Wrong,J. L. Mackie,1977,Academic book on Ethics.
+72,The Nicomachean Ethics,Aristotle,-350,Academic book on Ethics.
+73,Groundwork of the Metaphysics of Morals,Immanuel Kant,1785,Academic book on Ethics.
+74,Utilitarianism,John Stuart Mill,1863,Academic book on Ethics.
+75,A Theory of Justice,John Rawls,1971,Academic book on Ethics.
+76,The Ethics of Artificial Intelligence,Nick Bostrom,2011,Academic book on Ethics.
+77,Weapons of Math Destruction,Cathy O'Neil,2016,Academic book on Ethics.
+78,Race After Technology,Ruha Benjamin,2019,Academic book on Ethics.
+79,Algorithms of Oppression,Safiya Umoja Noble,2018,Academic book on Ethics.
+80,The Age of Surveillance Capitalism,Shoshana Zuboff,2019,Academic book on Ethics.

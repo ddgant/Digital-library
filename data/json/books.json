@@ -1,0 +1,562 @@
+[
+  {
+    "book_id": 1,
+    "title": "Calculus",
+    "author": "Michael Spivak",
+    "year": 1967,
+    "description": "Academic book on Mathematics."
+  },
+  {
+    "book_id": 2,
+    "title": "Introduction to Linear Algebra",
+    "author": "Gilbert Strang",
+    "year": 1993,
+    "description": "Academic book on Mathematics."
+  },
+  {
+    "book_id": 3,
+    "title": "Discrete Mathematics and Its Applications",
+    "author": "Kenneth H. Rosen",
+    "year": 1988,
+    "description": "Academic book on Mathematics."
+  },
+  {
+    "book_id": 4,
+    "title": "Principles of Mathematical Analysis",
+    "author": "Walter Rudin",
+    "year": 1953,
+    "description": "Academic book on Mathematics."
+  },
+  {
+    "book_id": 5,
+    "title": "Abstract Algebra",
+    "author": "David S. Dummit",
+    "year": 1991,
+    "description": "Academic book on Mathematics."
+  },
+  {
+    "book_id": 6,
+    "title": "Linear Algebra Done Right",
+    "author": "Sheldon Axler",
+    "year": 1995,
+    "description": "Academic book on Mathematics."
+  },
+  {
+    "book_id": 7,
+    "title": "Topology",
+    "author": "James R. Munkres",
+    "year": 1975,
+    "description": "Academic book on Mathematics."
+  },
+  {
+    "book_id": 8,
+    "title": "Numerical Analysis",
+    "author": "Richard L. Burden",
+    "year": 1978,
+    "description": "Academic book on Mathematics."
+  },
+  {
+    "book_id": 9,
+    "title": "A First Course in Probability",
+    "author": "Sheldon Ross",
+    "year": 1976,
+    "description": "Academic book on Mathematics."
+  },
+  {
+    "book_id": 10,
+    "title": "Mathematical Methods for Physics and Engineering",
+    "author": "K. F. Riley",
+    "year": 1997,
+    "description": "Academic book on Mathematics."
+  },
+  {
+    "book_id": 11,
+    "title": "The C Programming Language",
+    "author": "Brian W. Kernighan",
+    "year": 1978,
+    "description": "Academic book on Programming."
+  },
+  {
+    "book_id": 12,
+    "title": "Structure and Interpretation of Computer Programs",
+    "author": "Harold Abelson",
+    "year": 1984,
+    "description": "Academic book on Programming."
+  },
+  {
+    "book_id": 13,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "year": 2008,
+    "description": "Academic book on Programming."
+  },
+  {
+    "book_id": 14,
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "year": 1999,
+    "description": "Academic book on Programming."
+  },
+  {
+    "book_id": 15,
+    "title": "Introduction to Algorithms",
+    "author": "Thomas H. Cormen",
+    "year": 1990,
+    "description": "Academic book on Programming."
+  },
+  {
+    "book_id": 16,
+    "title": "Design Patterns",
+    "author": "Erich Gamma",
+    "year": 1994,
+    "description": "Academic book on Programming."
+  },
+  {
+    "book_id": 17,
+    "title": "Code Complete",
+    "author": "Steve McConnell",
+    "year": 1993,
+    "description": "Academic book on Programming."
+  },
+  {
+    "book_id": 18,
+    "title": "Python Crash Course",
+    "author": "Eric Matthes",
+    "year": 2015,
+    "description": "Academic book on Programming."
+  },
+  {
+    "book_id": 19,
+    "title": "Eloquent JavaScript",
+    "author": "Marijn Haverbeke",
+    "year": 2011,
+    "description": "Academic book on Programming."
+  },
+  {
+    "book_id": 20,
+    "title": "Refactoring",
+    "author": "Martin Fowler",
+    "year": 1999,
+    "description": "Academic book on Programming."
+  },
+  {
+    "book_id": 21,
+    "title": "Database System Concepts",
+    "author": "Abraham Silberschatz",
+    "year": 1991,
+    "description": "Academic book on Databases."
+  },
+  {
+    "book_id": 22,
+    "title": "An Introduction to Database Systems",
+    "author": "C. J. Date",
+    "year": 1975,
+    "description": "Academic book on Databases."
+  },
+  {
+    "book_id": 23,
+    "title": "Fundamentals of Database Systems",
+    "author": "Ramez Elmasri",
+    "year": 1989,
+    "description": "Academic book on Databases."
+  },
+  {
+    "book_id": 24,
+    "title": "The Data Warehouse Toolkit",
+    "author": "Ralph Kimball",
+    "year": 1996,
+    "description": "Academic book on Databases."
+  },
+  {
+    "book_id": 25,
+    "title": "SQL and Relational Theory",
+    "author": "C. J. Date",
+    "year": 2009,
+    "description": "Academic book on Databases."
+  },
+  {
+    "book_id": 26,
+    "title": "NoSQL Distilled",
+    "author": "Pramod J. Sadalage",
+    "year": 2012,
+    "description": "Academic book on Databases."
+  },
+  {
+    "book_id": 27,
+    "title": "Designing Data-Intensive Applications",
+    "author": "Martin Kleppmann",
+    "year": 2017,
+    "description": "Academic book on Databases."
+  },
+  {
+    "book_id": 28,
+    "title": "PostgreSQL: Up and Running",
+    "author": "Regina Obe",
+    "year": 2012,
+    "description": "Academic book on Databases."
+  },
+  {
+    "book_id": 29,
+    "title": "Learning SQL",
+    "author": "Alan Beaulieu",
+    "year": 2005,
+    "description": "Academic book on Databases."
+  },
+  {
+    "book_id": 30,
+    "title": "High Performance MySQL",
+    "author": "Baron Schwartz",
+    "year": 2004,
+    "description": "Academic book on Databases."
+  },
+  {
+    "book_id": 31,
+    "title": "The Art of Statistics",
+    "author": "David Spiegelhalter",
+    "year": 2019,
+    "description": "Academic book on Statistics."
+  },
+  {
+    "book_id": 32,
+    "title": "Statistical Inference",
+    "author": "George Casella",
+    "year": 1990,
+    "description": "Academic book on Statistics."
+  },
+  {
+    "book_id": 33,
+    "title": "An Introduction to Statistical Learning",
+    "author": "Gareth James",
+    "year": 2013,
+    "description": "Academic book on Statistics."
+  },
+  {
+    "book_id": 34,
+    "title": "Bayesian Data Analysis",
+    "author": "Andrew Gelman",
+    "year": 1995,
+    "description": "Academic book on Statistics."
+  },
+  {
+    "book_id": 35,
+    "title": "Naked Statistics",
+    "author": "Charles Wheelan",
+    "year": 2013,
+    "description": "Academic book on Statistics."
+  },
+  {
+    "book_id": 36,
+    "title": "Statistics",
+    "author": "David Freedman",
+    "year": 1978,
+    "description": "Academic book on Statistics."
+  },
+  {
+    "book_id": 37,
+    "title": "Practical Statistics for Data Scientists",
+    "author": "Peter Bruce",
+    "year": 2017,
+    "description": "Academic book on Statistics."
+  },
+  {
+    "book_id": 38,
+    "title": "The Elements of Statistical Learning",
+    "author": "Trevor Hastie",
+    "year": 2001,
+    "description": "Academic book on Statistics."
+  },
+  {
+    "book_id": 39,
+    "title": "Probability Theory: The Logic of Science",
+    "author": "E. T. Jaynes",
+    "year": 2003,
+    "description": "Academic book on Statistics."
+  },
+  {
+    "book_id": 40,
+    "title": "Think Stats",
+    "author": "Allen B. Downey",
+    "year": 2011,
+    "description": "Academic book on Statistics."
+  },
+  {
+    "book_id": 41,
+    "title": "The Art of Electronics",
+    "author": "Paul Horowitz",
+    "year": 1980,
+    "description": "Academic book on Electronics."
+  },
+  {
+    "book_id": 42,
+    "title": "Electronic Devices and Circuit Theory",
+    "author": "Robert L. Boylestad",
+    "year": 1972,
+    "description": "Academic book on Electronics."
+  },
+  {
+    "book_id": 43,
+    "title": "Microelectronic Circuits",
+    "author": "Adel S. Sedra",
+    "year": 1982,
+    "description": "Academic book on Electronics."
+  },
+  {
+    "book_id": 44,
+    "title": "Fundamentals of Electric Circuits",
+    "author": "Charles K. Alexander",
+    "year": 2000,
+    "description": "Academic book on Electronics."
+  },
+  {
+    "book_id": 45,
+    "title": "Digital Design",
+    "author": "M. Morris Mano",
+    "year": 1984,
+    "description": "Academic book on Electronics."
+  },
+  {
+    "book_id": 46,
+    "title": "Electric Circuits",
+    "author": "James W. Nilsson",
+    "year": 1983,
+    "description": "Academic book on Electronics."
+  },
+  {
+    "book_id": 47,
+    "title": "Signal Processing First",
+    "author": "James H. McClellan",
+    "year": 2003,
+    "description": "Academic book on Electronics."
+  },
+  {
+    "book_id": 48,
+    "title": "Foundations of Analog and Digital Electronic Circuits",
+    "author": "Agarwal & Lang",
+    "year": 2005,
+    "description": "Academic book on Electronics."
+  },
+  {
+    "book_id": 49,
+    "title": "CMOS VLSI Design",
+    "author": "Neil H. E. Weste",
+    "year": 1985,
+    "description": "Academic book on Electronics."
+  },
+  {
+    "book_id": 50,
+    "title": "Introduction to Electrodynamics",
+    "author": "David J. Griffiths",
+    "year": 1981,
+    "description": "Academic book on Electronics."
+  },
+  {
+    "book_id": 51,
+    "title": "Campbell Biology",
+    "author": "Jane B. Reece",
+    "year": 1987,
+    "description": "Academic book on Biology."
+  },
+  {
+    "book_id": 52,
+    "title": "Molecular Biology of the Cell",
+    "author": "Bruce Alberts",
+    "year": 1983,
+    "description": "Academic book on Biology."
+  },
+  {
+    "book_id": 53,
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "year": 1976,
+    "description": "Academic book on Biology."
+  },
+  {
+    "book_id": 54,
+    "title": "Genetics: Analysis and Principles",
+    "author": "Robert J. Brooker",
+    "year": 1999,
+    "description": "Academic book on Biology."
+  },
+  {
+    "book_id": 55,
+    "title": "Biochemistry",
+    "author": "Jeremy M. Berg",
+    "year": 1975,
+    "description": "Academic book on Biology."
+  },
+  {
+    "book_id": 56,
+    "title": "The Double Helix",
+    "author": "James D. Watson",
+    "year": 1968,
+    "description": "Academic book on Biology."
+  },
+  {
+    "book_id": 57,
+    "title": "On the Origin of Species",
+    "author": "Charles Darwin",
+    "year": 1859,
+    "description": "Academic book on Biology."
+  },
+  {
+    "book_id": 58,
+    "title": "Lehninger Principles of Biochemistry",
+    "author": "David L. Nelson",
+    "year": 1982,
+    "description": "Academic book on Biology."
+  },
+  {
+    "book_id": 59,
+    "title": "Human Physiology",
+    "author": "Dee Unglaub Silverthorn",
+    "year": 1998,
+    "description": "Academic book on Biology."
+  },
+  {
+    "book_id": 60,
+    "title": "Brock Biology of Microorganisms",
+    "author": "Michael T. Madigan",
+    "year": 1970,
+    "description": "Academic book on Biology."
+  },
+  {
+    "book_id": 61,
+    "title": "Pattern Recognition and Machine Learning",
+    "author": "Christopher M. Bishop",
+    "year": 2006,
+    "description": "Academic book on Machine Learning."
+  },
+  {
+    "book_id": 62,
+    "title": "Deep Learning",
+    "author": "Ian Goodfellow",
+    "year": 2016,
+    "description": "Academic book on Machine Learning."
+  },
+  {
+    "book_id": 63,
+    "title": "Hands-On Machine Learning with Scikit-Learn",
+    "author": "Aurélien Géron",
+    "year": 2017,
+    "description": "Academic book on Machine Learning."
+  },
+  {
+    "book_id": 64,
+    "title": "The Hundred-Page Machine Learning Book",
+    "author": "Andriy Burkov",
+    "year": 2019,
+    "description": "Academic book on Machine Learning."
+  },
+  {
+    "book_id": 65,
+    "title": "Machine Learning: A Probabilistic Perspective",
+    "author": "Kevin P. Murphy",
+    "year": 2012,
+    "description": "Academic book on Machine Learning."
+  },
+  {
+    "book_id": 66,
+    "title": "Reinforcement Learning",
+    "author": "Richard S. Sutton",
+    "year": 1998,
+    "description": "Academic book on Machine Learning."
+  },
+  {
+    "book_id": 67,
+    "title": "Natural Language Processing with Python",
+    "author": "Steven Bird",
+    "year": 2009,
+    "description": "Academic book on Machine Learning."
+  },
+  {
+    "book_id": 68,
+    "title": "Neural Networks and Deep Learning",
+    "author": "Michael Nielsen",
+    "year": 2015,
+    "description": "Academic book on Machine Learning."
+  },
+  {
+    "book_id": 69,
+    "title": "Data Science from Scratch",
+    "author": "Joel Grus",
+    "year": 2015,
+    "description": "Academic book on Machine Learning."
+  },
+  {
+    "book_id": 70,
+    "title": "Python Machine Learning",
+    "author": "Sebastian Raschka",
+    "year": 2015,
+    "description": "Academic book on Machine Learning."
+  },
+  {
+    "book_id": 71,
+    "title": "Ethics: Inventing Right and Wrong",
+    "author": "J. L. Mackie",
+    "year": 1977,
+    "description": "Academic book on Ethics."
+  },
+  {
+    "book_id": 72,
+    "title": "The Nicomachean Ethics",
+    "author": "Aristotle",
+    "year": -350,
+    "description": "Academic book on Ethics."
+  },
+  {
+    "book_id": 73,
+    "title": "Groundwork of the Metaphysics of Morals",
+    "author": "Immanuel Kant",
+    "year": 1785,
+    "description": "Academic book on Ethics."
+  },
+  {
+    "book_id": 74,
+    "title": "Utilitarianism",
+    "author": "John Stuart Mill",
+    "year": 1863,
+    "description": "Academic book on Ethics."
+  },
+  {
+    "book_id": 75,
+    "title": "A Theory of Justice",
+    "author": "John Rawls",
+    "year": 1971,
+    "description": "Academic book on Ethics."
+  },
+  {
+    "book_id": 76,
+    "title": "The Ethics of Artificial Intelligence",
+    "author": "Nick Bostrom",
+    "year": 2011,
+    "description": "Academic book on Ethics."
+  },
+  {
+    "book_id": 77,
+    "title": "Weapons of Math Destruction",
+    "author": "Cathy O'Neil",
+    "year": 2016,
+    "description": "Academic book on Ethics."
+  },
+  {
+    "book_id": 78,
+    "title": "Race After Technology",
+    "author": "Ruha Benjamin",
+    "year": 2019,
+    "description": "Academic book on Ethics."
+  },
+  {
+    "book_id": 79,
+    "title": "Algorithms of Oppression",
+    "author": "Safiya Umoja Noble",
+    "year": 2018,
+    "description": "Academic book on Ethics."
+  },
+  {
+    "book_id": 80,
+    "title": "The Age of Surveillance Capitalism",
+    "author": "Shoshana Zuboff",
+    "year": 2019,
+    "description": "Academic book on Ethics."
+  }
+]
